@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dnv/layouts/dnv.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/layouts/dnv.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,6 +150,7 @@
       <workItem from="1566278061754" duration="19094000" />
       <workItem from="1566318210886" duration="23588000" />
       <workItem from="1566394203798" duration="852000" />
+      <workItem from="1566407264393" duration="5297000" />
     </task>
     <task id="LOCAL-00001" summary="Sliders">
       <created>1566394911098</created>
