@@ -1,0 +1,94 @@
+/*****************************
+13 - Components - Carousel
+*****************************/
+
+/*-- 13.00 - Carousel Gutter --*/
+
+.slick{
+	&-gutter{
+		&-30{
+			.slick-list{
+				margin-left: -15px;
+				margin-right: -15px;
+				.slick-slide{
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
+		}
+	}
+}
+
+/*-- 13.01 - Slick Dot Margin Top --*/
+
+.slick-dot-mt-40{
+	.slick-dots{
+		margin-top: 40px !important;
+	}
+}
+
+/*-- 13.03 - Carousel Dots --*/
+
+.slick{
+	&-dots{
+		@extend %posrelative;
+		@extend %textCenter;
+		line-height: 0;
+		li{
+		    @extend %posrelative;
+		    @extend %displayInlineBlock;
+		    @extend %cursorPointer;
+			@extend %basetransition;
+			@extend %primary-bg-color;
+			@extend %padding0;
+			margin: 0 3px;
+			opacity: .4;
+			@include transform(scale(.8));
+			@include circle(8);
+			button{
+			    font-size: 0;
+				@extend %padding0;
+			    @extend %displayBlock;
+			    @extend %width100;
+			    @extend %height100;
+			    @extend %cursorPointer;
+			    @extend %border-none;
+			    @extend %transparent-bg;
+			    @extend %basetransition;
+			}
+			&.slick-active{
+				opacity: 1;
+				@include transform(scale(1));
+			}
+		}
+	}
+}
+
+/*-- 13.04 - Related Post Carousel --*/
+
+.related-post-carousel{
+	.slick-list{
+		padding: 0px 25% 0 0 !important;
+		@include breakpoint(medium){
+			padding: 0px 10% 0 0 !important;
+		}
+		@include breakpoint(small){
+			padding: 0px 30% 0 0 !important;
+		}
+		@include breakpoint(xsmall){
+			padding: 0px 20% 0 0 !important;
+		}
+		@include breakpoint(xxsmall){
+			padding: 0px !important;
+		}
+	}
+	.slick-slide{
+		&.last-active{
+			opacity: .5;
+			@extend %basetransition;
+			@include breakpoint(small){
+				opacity: 1;
+			}
+		}
+	}
+}

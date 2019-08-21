@@ -1,0 +1,110 @@
+/******************************
+
+INDEX:
+
+    00 - Base - Global
+    01 - Base - Typography
+
+    02 - Utilities - Helper
+    03 - Utilities - Common
+
+    05 - Layout - Header
+    06 - Layout - Footer
+    07 - Layout - Sidebar
+
+    10 - Components - Accordion
+    11 - Components - Blog
+        11.00 - Blog
+        11.01 - Blog Details
+        11.02 - Related Post
+
+    12 - Components - Button
+    13 - Components - Carousel
+        13.00 - Carousel Gutter
+        13.01 - Slick Dot Margin Top 
+        13.02 - Carousel Dots
+
+    14 - Components - Comment
+    15 - Components - Feature
+    16 - Components - Form
+        16.00 - Global Form
+        16.01 - Newsletter Form
+        16.02 - Search Form
+
+    17 - Components - Icon
+    18 - Components - Navigation
+        18.00 - Main Navigation
+        18.01 - Off Canvas Menu
+
+    19 - Components - Portfolio
+    20 - Components - Pricing
+    21 - Components - Progress Bar
+    22 - Components - Service
+    24 - Components - Social
+    25 - Components - Testimonial
+
+    63 - Utilities - Color
+    64 - Utilities - Spacing
+
+
+
+
+******************************/
+
+
+/*
+    Defult Primary Color:       #002257
+    Default Border Color:       #eeeeee
+    Default Text Color:         #444444
+    Default Heading Color:      #222222
+    Default Body Font:          'Roboto', sans-serif
+
+*/
+
+
+
+// Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900');
+
+
+// Base 
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/typography';
+
+// Utilities
+@import 'utilities/helper';
+@import 'utilities/common';
+
+// Layout 
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+
+// Components
+@import 'components/accordion';
+@import 'components/blog';
+@import 'components/button';
+@import 'components/carousel';
+@import 'components/comment';
+@import 'components/feature';
+@import 'components/form';
+@import 'components/icon';
+@import 'components/navigation';
+@import 'components/portfolio';
+@import 'components/pricing';
+@import 'components/progress-bar';
+@import 'components/service';
+@import 'components/slider';
+@import 'components/social';
+@import 'components/testimonial';
+
+
+// Color
+@import 'utilities/color'; 
+@import 'utilities/spacing'; 
+
+

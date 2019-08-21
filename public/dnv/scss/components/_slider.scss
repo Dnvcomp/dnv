@@ -1,0 +1,41 @@
+/*****************************
+23 - Components - Slider
+*****************************/
+
+.homepage-slider{
+	@extend %posrelative;
+	.single-slide{
+		height: 790px;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-position: center;
+		@include breakpoint(xxalarge){
+			height: 745px;
+		}
+		@include breakpoint(xxblarge){
+			height: 600px;
+		}
+		@include breakpoint(medium){
+			height: 500px;
+		}
+		@include breakpoint(small){
+			height: 400px;
+		}
+	}
+	.custom-paging{
+		@extend %posabsolute;	
+		@extend %lineheight1;
+		color: #fefeff;
+		bottom: 40px;
+		.current{
+			@extend %displayInlineBlock;
+			padding-right: 5px;
+		}
+		.total{
+			@extend %displayInlineBlock;
+			@extend %fontWeight500;
+			font-size: 40px;
+			padding-left: 5px;
+		}
+	}
+}

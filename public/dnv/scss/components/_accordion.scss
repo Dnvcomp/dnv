@@ -1,0 +1,42 @@
+/*****************************
+10 - Components - Accordion
+*****************************/
+
+.accordion{
+	.card{
+		border: 2px solid $border-color;
+		@extend %borderRadius;
+		&:first-of-type,
+		&:not(:first-of-type):not(:last-of-type){
+			border-bottom: 2px solid $border-color;
+			@extend %borderRadius;
+		}
+		&:not(:last-child){
+			margin-bottom: 10px;
+		}
+		&-header{
+			padding: 0 15px;
+			border-bottom: none;
+			@extend %transparent-bg;
+			.btn-link{
+				@extend %transparent-bg;
+				@extend %heightAuto;
+				@extend %displayBlock;
+				@extend %textLeft;
+				padding: 15px 0;
+				border: none;
+				line-height: 1.3;
+				overflow-wrap: break-word;
+				@include white-space(normal);
+				@include border-radius(0);
+				border-bottom: 2px solid $primary-color;
+				&.collapsed{
+					border: none;
+				}
+			}
+		}
+		&-body{
+			padding: 15px;
+		}
+	}
+} 

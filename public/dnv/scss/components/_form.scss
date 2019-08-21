@@ -1,0 +1,85 @@
+/*****************************
+16 - Components - Form
+*****************************/
+
+
+/*-- 16.00 - Global Form --*/
+
+.form{
+	&__input{
+		@extend %width100;
+		padding-top: 0;
+		padding-bottom: 19px;
+		border: none;
+		border-bottom: 1px solid $color-mercury;
+		color: $color-dust;
+		@include placeholder{
+			color: $color-dust;
+		}
+		&--textarea{
+			height: 100px; 
+		}
+	}   
+	&__output{
+        text-align: left;
+        margin-top: 5px;
+        &.success{
+            color: $color-green;
+        }
+        &.error{ 
+            color: $color-red;
+        }
+    }
+} 
+
+/*-- 16.00 - Newsletter Form --*/
+
+.newsletter-form{
+	@extend %posrelative;
+	&__input{
+		height: 40px;
+		@extend %width100;
+		@extend %transparent-bg;
+		border: 1px solid $border-color;
+		padding-left: 10px;
+		padding-right: 100px;
+		font-size: 13px;
+		@extend %fontSize14;
+		@include placeholder{
+			font-size: 13px;
+			font-style: italic;
+		}
+	}
+	&__btn{
+		@extend %border-none;
+		@extend %padding0;
+		@extend %posabsolute;
+		@extend %right-0;
+		@extend %top-0;
+		@extend %primary-bg-color;
+		@extend %white-color;
+		height: 40px;
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+}
+
+
+/*-- 16.00 - Search Form --*/
+
+.search-form{
+	@extend %flexbox;
+	&__input{
+		width: 100%;
+		height: 40px;
+		border: 1px solid $border-color;
+		padding: 10px;
+	}
+	&__submit{
+		padding: 5px 14px;
+		background-color: $primary-color;
+		color: $color-white;
+		display: inline-block;
+		border: 0;
+	}
+}

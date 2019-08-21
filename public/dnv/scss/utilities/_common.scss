@@ -1,0 +1,372 @@
+/*****************************
+03 - Utilities - Common
+*****************************/
+
+/*-- Global Overlay --*/
+
+.global-overlay{
+	@extend %basetransition;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba($heading-color, .7);
+	z-index: 1000;
+	@extend %invisible;
+	&.overlay-open{
+		@extend %visible;
+	}
+}
+.body-open{
+	overflow: hidden;
+}
+
+/*-- Pagination --*/
+
+.pagination{
+	@extend %justify-center;
+	li{
+		&:not(:last-child){
+   			margin-right: 20px;
+		}
+		.page-number{
+			@include textBoxCenter(35, 35);
+			@extend %primary-bg-color;
+			@extend %white-color;
+			@extend %displayBlock;
+			@extend %basetransition;
+			border: 1px solid transparent;
+			&.current{
+				@extend %transparent-bg;
+				border-color: $border-color;
+				@extend %primary-color;
+			}
+			&:hover{
+				@extend %transparent-bg;
+				border-color: $border-color;
+				@extend %primary-color;
+			}
+		}
+		.dot{
+			@extend %displayInlineBlock;
+			width: 5px;
+			height: 5px;
+			line-height: 5px;
+			@extend %primary-bg-color;
+		}
+	}
+}
+
+
+/*-- Tooltip --*/
+
+.tooltip{
+	@include breakpoint(small){
+		display: none;
+	}
+	margin-bottom: 5px;
+	&:hover{
+		display: none;
+	}
+	&-inner{
+		color: #fff;
+		padding: 3px 10px;
+		font-size: 13px;
+	}
+	.arrow{
+		&:before, 
+		&:after{
+			border-left-color: transparent;
+			border-right-color: transparent;
+			border-top-color: #000;
+		}
+	}
+}
+
+
+/*-- Google Map --*/
+
+#google-map{
+	height: 350px;
+}
+
+/*-- Mailchimp Alerts --*/
+
+.mailchimp-alerts{
+	div:not(:empty){
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.mailchimp{
+		&-error{
+			color: $color-red;
+		}
+		&-success{
+			color: $color-green;	
+		}
+	}
+}
+
+
+/*-- Scroll To Top --*/
+
+.scroll-to-top{
+    position: fixed;
+    right: 50px;
+    bottom: 150px;
+    z-index: 999;
+    font-size: 20px;
+    background-color: $heading-color;
+    opacity: 0;
+    @extend %overflowHidden;
+    @extend %white-color;
+    @extend %displayBlock;
+    @extend %textCenter;
+    @include textBoxCenter(50, 50);
+    @include transition(all 300ms ease);
+	i{
+		@extend %white-color;
+		@extend %posrelative;
+		&:before{
+			@extend %posrelative;
+			@extend %lefttop;
+		    width: inherit;
+		    height: inherit;
+		    line-height: inherit;
+		    @include transition(all 300ms ease);
+		}
+		&:after{
+			@extend %fontAwesome;
+			content: '\f106';
+		    top: 40px;
+		    left: 0;
+		    width: inherit;
+		    height: inherit;
+		    line-height: inherit;
+		    @include transition(all 300ms ease);
+		}
+	}
+}
+
+/*-- Delimeter --*/
+
+.delimeter{
+	border-top-width: 2px;
+	border-top-style: solid;
+	width: 100px;
+	margin: 0;
+	@extend %primary-border-color;
+}
+
+
+/*-- Hamburger Icon --*/ 
+
+.hamburger-icon{
+	@extend %width100;
+	@extend %height100;
+	@extend %posrelative;
+	@extend %cursorPointer;
+	@extend %displayBlock;
+	margin: 0 auto;
+	@include transform(rotate(0deg));
+	@include transition(.5s ease-in-out);
+	span{
+		@extend %displayBlock;
+		@extend %posabsolute;
+		height: 3px;
+		width: 50%;
+		background: $body-color;
+		opacity: 1;
+		@include transform(rotate(0deg));
+		@include transition(.25s ease-in-out);
+		&:nth-child(even){
+			left: 50%;
+			border-radius: 0 3px 3px 0;
+		}
+		&:nth-child(odd){
+			left:0px;
+			border-radius: 3px 0 0 3px;
+		}
+		&:nth-child(1), &:nth-child(2){
+			top: 4px;
+		}
+		&:nth-child(3), &:nth-child(4){
+  			top: 16px;
+		}
+		&:nth-child(5), &:nth-child(6){
+  			top: 28px;
+		}
+	}
+	&.open{
+		span{
+			&:nth-child(1), &:nth-child(6){
+				@include transform(rotate(45deg));
+			}
+			&:nth-child(2), &:nth-child(5){
+				@include transform(rotate(-45deg));
+			}
+			&:nth-child(1){
+				left: 5px;
+				top: 10px;
+			}
+			&:nth-child(2){
+				left: calc(50% - 2px);
+				top: 10px;
+			}
+			&:nth-child(3){
+				left: -50%;
+				opacity: 0;
+			}
+			&:nth-child(4){
+				left: 100%;
+				opacity: 0;
+			}
+			&:nth-child(5){
+				left: 5px;
+				top: 21px;
+			}
+			&:nth-child(6){
+				left: calc(50% - 3px);
+				top: 20px; 
+			}
+		}
+	}
+}
+
+
+/*-- Breadcrumb --*/ 
+
+
+.page-title{
+	&-area{
+		@extend %posrelative;
+		&:after{
+			@extend %pseudo;
+			@extend %lefttop;
+			@extend %width100;
+			@extend %height100;
+			background-color: rgba(0, 0, 0, 0.7);
+			z-index: 1;
+		}
+		&-2{
+			height: 60rem;
+		}
+		*{
+			z-index: 4;
+		}
+	}
+	font-size: 36px;
+	line-height: 1.2;
+	@extend %widthAuto;
+	@extend %white-color;
+	@include breakpoint(small){
+		font-size: 22px;
+	}
+	@include breakpoint(xsmall){
+		margin-bottom: 10px;
+	}
+}
+.breadcrumb{
+	@include border-radius(0);
+	@extend %transparent-bg;
+	@extend %padding0;
+	@extend %marginBottom0;
+	@extend %justify-center;
+	li{
+		@extend %posrelative;
+		a, span{
+			@extend %white-color;
+		}
+		&:not(:last-child){
+		    margin-right: 10px;
+		    padding-right: 15px;
+			&:after{
+				@extend %posabsolute;
+				content: '/';
+				@extend %white-color;
+				@extend %right-0;
+				@extend %top-0;
+			}
+		}
+	}
+}
+
+
+/*-- Contact Info --*/ 
+
+.contact-info{
+	p{
+		line-height: 1.9;
+		i{
+			padding-right: 5px;
+		}
+	}
+}
+
+
+/*-- About --*/ 
+
+.about-grid{
+	display: -ms-grid;
+	display: grid;
+	grid-template-columns: repeat( 2,1fr);
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+	@include breakpoint(xsmall){
+		grid-template-columns: repeat( 1,1fr);
+		grid-row-gap: 20px;
+	}
+}
+
+.about-box{
+	@extend %width100;
+	&__inner{
+		@include flexbox;
+	}
+	&__icon{
+		max-width: 50px;
+		@include flex-basis(50px);
+		i{
+			font-size: 30px;
+			color: $color-shaft;
+		}
+	}
+	&__info{
+		max-width: calc(100% - 50px);
+		@include flex-basis(calc(100% - 50px));
+		margin-top: -4px;
+		h4{
+			margin-bottom: 5px;
+		}
+	}
+}
+.about-bg{
+	background-position: left center;
+	background-size: 67% 100%;
+	@include breakpoint(small){
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+/*-- Error Text --*/
+
+.error{
+	h1{
+	    font-size: 25rem;
+	    font-weight: 900;
+	    letter-spacing: 1rem;
+	    line-height: 1;
+	    margin-bottom: 30px; 
+	    padding: 0;
+	    @extend %primary-color;
+	}
+	h2{
+		font-size: 25px;
+		margin-bottom: 31px;
+	}
+	p{
+		margin-bottom: 36px;
+	}
+}

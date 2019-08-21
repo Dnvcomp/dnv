@@ -1,0 +1,58 @@
+/*****************************
+12 - Components - Button
+*****************************/
+
+.btn{
+	@extend %fontSize16;
+	@extend %textUpper;
+	@extend %displayInlineBlock;
+	@extend %borderRadius;
+	@extend %basetransition;
+	color: #fefeff;
+	background-color: $primary-color;
+	padding: 15px 39px;
+	@include breakpoint(medium){
+		padding: 12px 30px;
+	}
+	@include breakpoint(small){
+		padding: 10px 25px;
+	}
+
+	&-outline{
+		background-color: transparent;
+		border-width: 1px;
+		border-style: solid;
+		border-color: $primary-color;
+	}
+	&-white{
+		border-color: $color-white;
+	}
+	&-shape{
+		&-round{
+			@include border-radius(500px);
+		}
+	}
+	&-brw{
+		&-2{
+			border-width: 2px;
+		}
+	}
+	&:hover{
+		background-color: transparent;
+		border-color: $primary-color;
+		color: $primary-color;
+	}
+	&-hover{
+		&-1{
+			&:hover{
+				background-color: $color-white;
+				border-color: $color-white;
+				color: $primary-color;
+			}
+		}
+	}
+} 
+
+.read-more-btn{
+	border-bottom: 1px solid $border-color;
+}

@@ -1,0 +1,71 @@
+/*****************************
+15 - Components - Feature
+*****************************/
+
+.feature{
+	@extend %basetransition;
+	@extend %posrelative;
+	@extend %overflowHidden;
+	&__icon{
+		margin-bottom: 17px;
+		i{
+			font-size: 25px;
+		}
+	}
+	&__title{
+		font-size: 22px;
+		margin-bottom: 19px; 
+	}
+	&__desc{
+		@extend %fontWeight500;
+		@extend %primary-color;
+ 		line-height: 1.625;
+	}
+	&-style{
+		&-2{
+			padding: 35px 33px 35px 35px;
+			@include box-shadow(0px 0px 9px 0px rgba(0, 0, 0, 0.05));
+			z-index: 1;
+			&:after{
+				@extend %pseudo;
+				@include circle(80);
+				@include transform(scale(.2));
+				@include transition(.4s ease);
+				background-color: #3c54dc;
+				bottom: 20px;
+				left: -10px;
+				z-index: -1;
+				@extend %invisible;
+			}
+			.feature{
+				&__icon{
+					margin-bottom: 25px;
+				}
+				&__title{
+					margin-bottom: 27px; 
+				}
+			}
+			&:hover{
+				background-color: #455eee;
+				&:after{
+					@extend %visible;
+					@include transform(scale(1));
+				}
+				.feature{
+					&__icon{
+						.icon-box{
+							border-color: $color-white;
+							@extend %white-color;
+						}
+					}
+					&__title{
+						@extend %white-color;
+					}
+					&__desc{
+						@extend %white-color;
+					}
+				}
+			}
+		}
+	}
+}

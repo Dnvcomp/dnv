@@ -1,0 +1,79 @@
+/*****************************
+19 - Components - Portfolio
+*****************************/
+
+
+.portfolio{
+	&__inner{
+		@extend %posrelative;
+		&:before{
+			@extend %pseudo;
+			@extend %absCenter;
+			width: 10%;
+			height: 10%;
+			background-color: rgba($primary-color, 0.702);
+			@extend %invisible;
+			@include transition(opacity .1s, width .35s, height .35s);
+			z-index: 1;
+		}
+		&:hover{
+			&:before{
+				width: 92%;
+				height: 95%;
+				@extend %visible; 
+			}
+			.portfolio{
+				&__link{
+					visibility: visible;
+					opacity: 1;
+					@include transform(translateY(-55px));
+				}
+				&__title{
+					visibility: visible;
+					opacity: 1;
+					@include transform(translateY(-43px));						
+				} 
+			}
+		}
+	} 
+	&__info{
+		@extend %posabsolute;
+	    @extend %width100;
+	    @extend %bottom-0;
+	    @extend %textCenter;
+	    z-index: 2;
+	    overflow: visible;
+	}
+	&__link{
+		@extend %white-color;
+		@extend %displayInlineBlock;
+		@extend %fontWeight700;
+		@extend %fontSize18;
+		@include borderIconCenter(23, 1);
+		border-width: 1px;
+		border-style: solid;
+		border-color: rgb(255, 255, 255);
+		visibility: hidden;
+		opacity: 0;
+		@include transform(translateY(15px));
+		@include transition(all .3s);
+		&:hover{
+			@extend %white-color;
+		}
+	}
+	&__title{
+		@extend %white-color;
+		@extend %fontSize18;							
+		@extend %margin0;	
+		visibility: hidden;
+		opacity: 0;
+		@include transform(translateY(-8px));		
+		@include transition(all .3s);
+		a{
+			&:hover{
+				color: inherit;
+			}
+		}				
+	}
+}
+

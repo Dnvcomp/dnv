@@ -1,0 +1,132 @@
+/*****************************
+25 - Components - Testimonial
+*****************************/
+
+.testimonial--horizontal--active {
+    position: relative;
+    padding-right: 210px;
+    margin-left: 20px;
+    @include breakpoint(xsmall){
+    	padding-right: 0;
+    	margin-right: 20px;
+    }
+}
+
+.testimonial{
+	&-style-1{
+		.testimonial{
+			&__inner{
+				padding-top: 62px;
+				padding-bottom: 45px;
+				padding-left: 40px;
+				padding-right: 40px;
+				background-color: $color-white;
+				@include transition(background-color .8s);
+				&:after{
+					@extend %posabsolute;
+					font-family: $font-awesome;
+					line-height: .9;
+					content: '\f10d';
+					left: 40px;
+					top: 0;
+					color: $color-blue;
+					font-size: 30px;
+					@extend %basetransition;
+				}
+				&:hover{
+					background-color: $color-blue;
+					&:after{
+						@extend %white-color;
+					}
+					.testimonial{
+						&__desc{
+							p{
+								@extend %white-color;
+							}
+						}
+						&__author{
+							&--name{
+								@extend %white-color;
+							}
+							&--role{
+								@extend %white-color;
+							}
+						}
+					}
+				}
+			}
+			&__desc{
+				margin-bottom: 25px;
+				p{
+					color: $color-dust;	
+				}
+			}
+			&__author{
+				@extend %verticalFlexCenter;
+				@extend %posrelative;
+				&--img{
+					max-width: 60px;
+					@include flex-basis(60px);
+					@include border-radius(50%);
+					img{
+						@include circle(60px);
+					}
+				}
+				&--info{
+					max-width: calc(100% - 60px);
+					@include flex-basis(calc(100% - 60px));
+					padding-left: 30px;
+				}
+				&--name{
+					color: $color-dark;
+					margin-bottom: 5px;
+					@extend %fontSize18;
+					@extend %basetransition;
+				}
+				&--role{
+					color: $color-dust;	
+					@extend %fontSize14;
+					@extend %basetransition;
+				}
+			}
+		}
+	}
+	&-style-2{
+		.testimonial{
+			&__inner{
+			}
+			&__desc{
+				margin-bottom: 30px;
+				p{
+					@extend %fontWeight300;
+					@extend %fontSize15;
+				}
+			}
+			&__author{
+				@extend %verticalFlexCenter;
+				&--img{
+					max-width: 80px;
+					@include flex-basis(80px);
+					img{
+						@extend %borderRadius50;
+					}
+				}
+				&--info{
+					max-width: calc(100% - 80px);
+					@include flex-basis(calc(100% - 80px));
+					padding-left: 20px;
+				}
+				&--name{
+					color: $color-shaft;
+					font-size: 22px;
+					@extend %textUpper;
+					@extend %fontWeight500;
+					@extend %margin0;
+				}
+				&--role{
+
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,329 @@
+/*****************************
+18 - Components - Navigation
+*****************************/
+
+
+/*-- 18.00 - Main Navigation --*/
+
+.main-navigation{
+	.mainmenu{
+		line-height: 1;
+		&__item{ 
+			@include breakpoint(largeonly){
+				display: inline-block;
+				padding: 22px 0px 22px 0px;
+				position: relative;
+				&:after{
+					position: absolute;
+					content: '';
+					width: 100%;
+					height: 100%;
+					left: 0;
+					bottom: auto;
+				}
+			}
+			&:not(:last-child){
+				.mainmenu__link{
+					@include breakpoint(largeonly){
+						margin-right: 15px;
+					}
+					@include breakpoint(xlargeonly){
+						margin-right: 23px;
+					}
+					@include breakpoint(xxlargeonly){
+						margin-right: 30px;
+					}
+				}
+			} 
+			&.active{
+				& > a{
+					@include breakpoint(largeonly){
+						color: $color-shaft;
+					}
+				}
+			}
+			&.menu-item-has-children{
+				& > a{
+					@extend %posrelative;
+					&:after{
+						font-family: fontAwesome;
+						line-height: 1;
+					    content: '\f0d7';
+					    margin-left: 6px;
+					    color: inherit;
+					    font-size: 12px;
+					}
+				}
+				& > ul{
+					@include breakpoint(largeonly){
+						position: absolute;
+					    left: 0;
+						top: 250%;
+						background: #f7f8f9;   
+						min-width: 210px;
+						margin-top: 25px;
+						padding: 25px 15px 25px 45px;
+						z-index: 9; 
+						pointer-events:none;
+						@include box-shadow(0px 1px 4px 0px rgba(0, 0, 0, 0.2));
+						@include white-space(nowrap);
+						@include transition(all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1));
+						visibility: hidden;
+						opacity: 0;
+					}
+					@include breakpoint(xlargeonly){
+						left: 0 !important;
+					}
+					li{ 
+						padding: 15px 0;
+						a{
+							@include breakpoint(largeonly){
+								color: #262626;
+								display: block;
+							}
+							&:hover{
+								@include breakpoint(largeonly){
+							    	color: $primary-color;
+								}
+							}
+						}
+					} 
+					.sub-menu{
+						@include breakpoint(largeonly){
+							position: absolute;
+							top: 0%;
+							background: #f7f8f9;   
+							min-width: 210px;
+							padding: 25px 15px 25px 45px;
+							z-index: 9; 
+							pointer-events:none;
+							@include box-shadow(0px 1px 4px 0px rgba(0, 0, 0, 0.2));
+							@include white-space(nowrap);
+							@include transition(all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1));
+							visibility: hidden;
+							opacity: 0;
+						}
+						@include breakpoint(xlargeonly){
+							left: 100% !important;
+							margin-left: 15px !important;
+						}
+					}
+					&.sub-menu{
+						@include breakpoint(largeonly){
+							text-align: left;
+							z-index: 99999;
+							position: absolute;
+						}
+						li{
+							&:hover{
+								ul{
+									@include breakpoint(largeonly){
+										visibility: visible;
+										pointer-events: visible;
+										opacity: 1;
+									}
+								}
+							}
+							a{
+								@include breakpoint(largeonly){
+									text-transform: capitalize;
+								}
+							}
+						}
+					}
+				}
+				&:hover{
+					& > ul{
+						@include breakpoint(largeonly){
+							pointer-events: visible;
+							top: 100%;
+							visibility: visible;
+							opacity: 1;
+						}
+					}
+				}
+				ul{
+					li{
+						&.menu-item-has-children{
+							& > a{
+								@extend %posrelative;
+								&:after{
+									font-family: fontAwesome;
+									line-height: 1;
+								    content: '\f0da';
+								    margin-left: 0;
+								    color: inherit;
+								    font-size: 12px;
+								    right: 0;
+								    position: absolute;
+								    top: 3px;
+								}
+							}
+							&:before{
+								@extend %pseudo;
+								right: -15px;
+								width: 15px;
+								height: 100%;
+								top: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+		&__link{
+			@include breakpoint(largeonly){
+				color: $color-shaft;
+				display: block;
+				font-weight: 700;
+				font-size: 16px;
+			}
+		}
+		li{
+			@include breakpoint(largeonly){
+				position: relative;
+			}	
+			.sub-menu{
+				@include breakpoint(largeonly){
+					display: block;
+					background: $color-white;
+				}
+			}
+			ul{
+				@include breakpoint(largeonly){
+					@include transition(all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1));
+				}
+			}
+			& > a{
+				@include breakpoint(largeonly){
+				    line-height: 1;
+				    z-index: 1;
+				    overflow: hidden;
+				}
+				&:hover{
+					span{
+						@include breakpoint(largeonly){
+							@include transform(translateY(-100%));
+						}
+					}
+				}
+				span{
+					@include breakpoint(largeonly){
+						position: relative;
+						display: inline-block;
+						transition: transform 0.3s;
+					}
+					&:before{
+					    position: absolute;
+					    top: 100%;
+					    content: attr(data-hover);
+					    transform: translate3d(0, 0, 0);
+					}
+				}
+			}
+		}
+	}
+}
+
+/*-- 18.01 - Off Canvas Menu --*/
+
+.offcanvas-menu-wrapper{
+	.offcanvas-menu-inner{
+	    position: fixed;
+	    top: 0;
+	    left: -265px;
+	    width: 265px;
+	    height: 100%;
+	    z-index: 9999;
+	    overflow-x: hidden;
+	    overflow-y: auto;
+	    padding: 15px;
+	    @extend %white-bg-color;
+	    @extend %invisible;
+	    @extend %basetransition;
+	}
+	&.open{
+		.offcanvas-menu-inner{
+			@extend %left-0;
+			@extend %visible;
+		}
+	}
+	.btn-close{
+	    @extend %displayBlock;
+	    @extend %posabsolute;
+	    top: 25px;
+	    right: 14px;
+	    z-index: 100;
+	}
+}
+
+.offcanvas-navigation{
+	padding-top: 60px;
+	@extend %height100;
+	@extend %flexbox;
+	@extend %flex-column;
+	.offcanvas-menu{
+		& > li{
+			& > a{
+			    span{ 
+			    	@extend %posrelative;
+			    }
+			}
+		}
+		li {
+			@extend %posrelative;
+			border-bottom: 1px solid $border-color;
+			& > .menu-expand{
+			    @extend %posabsolute;
+			    @extend %right-0;
+			    @extend %cursorPointer;
+			    @extend %textCenter;
+			    top: -1px;
+			    width: 50px;
+			    height: 100%;
+			    line-height: 50px;
+			    margin-right: 4px;
+			    color: $color-light;
+			    @extend %basetransition;
+			}
+			a{
+			    @extend %fontSize14;
+			    @extend %fontWeight400;
+			    @extend %textCap;
+			    @extend %displayBlock;
+			    color: $color-black;
+			    padding: 15px 0;
+				line-height: 1;
+			}
+			.sub-menu{
+				padding-left: 10px;
+				li{
+					&:last-child{
+						border-bottom-width: 0px;
+					}
+				}
+			}
+			&.menu-open{
+				& > .menu-expand{
+					i{
+						&:before{
+							content: '\f106';
+						}
+					}
+				}
+			}
+			&:hover{
+				& > a{
+					color: $primary-color !important;
+				}  
+				& > .menu-expand{
+					color: $primary-color !important;
+				}
+			}
+		}
+	}
+	.site-info{
+		margin-bottom: 35px;
+		margin-top: auto;
+	}
+}

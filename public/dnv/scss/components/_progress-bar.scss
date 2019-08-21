@@ -1,0 +1,36 @@
+/*****************************
+21 - Components - Progress Bar
+*****************************/
+
+.progress-charts {
+    overflow: hidden;
+    &:not(:last-child){
+    	margin-bottom: 25px;
+    }
+    .progress{
+    	overflow: visible;
+    	height: 4px;
+    	@include border-radius(0);
+    	&-title{
+    		@extend %margin0;
+    		@extend %fontSize14;
+            padding-top: 8px;
+    	}
+    	&-bar{
+			@extend %posrelative;
+			@extend %noborderRadius;
+			background-color: #414141;
+            &.violet-bg{
+                background-color: $color-violet;
+            }
+    		.percent-label{
+			    @extend %posabsolute;
+			    @extend %body-color;
+			    @extend %lineheight1;
+			    @extend %fontSize14;
+			    right: 0;
+			    top: 20px;
+    		}
+    	}
+    }
+}

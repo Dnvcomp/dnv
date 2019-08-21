@@ -1,0 +1,125 @@
+/*****************************
+05 - Layout - Header
+*****************************/
+
+/*-- 05.00 - Header --*/
+
+.header{
+	.logo{
+		display: block;
+		&--transparent{
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+		&--normal{
+			height: auto;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	&__top{
+		font-size: 13px;
+		font-weight: 300;
+		background-color: $primary-color;
+		color: $color-white;
+		padding: 13px 0;
+		a{
+			color: inherit;
+		}
+		&-inner{
+			@include flexbox;
+			@include align-items(center);
+			@include justify-content(space-between); 
+		}
+	}
+	&__middle{
+		background-color: $color-porcelain;
+		color: $color-shaft;
+		&-inner{
+	        @include flexbox;
+	        @include align-items(center);
+	        padding-top: 25px;
+	        padding-bottom: 25px;
+		}
+		&-left{
+            @include flex-shrink(0);
+            @include flex-basis(18%);
+            @include breakpoint(small){
+            	@include flex-basis(50%);
+            }
+		}
+		&-center{
+			@include flex-grow(1);
+		}
+		&-right{
+            @include flex-shrink(0);
+            @include flex-basis(18%);
+            @include breakpoint(small){
+            	@include flex-basis(50%);
+            }
+		}
+	}
+	&-toolbar{
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(flex-end);
+		&__btn{
+			&.menu-btn{
+			    width: 35px;
+			    height: 35px;
+			    line-height: 35px;
+			    text-align: center;
+			    display: inline-block;
+			}
+		}
+	}
+	.top-menu{
+		li{
+			padding-right: 20px;
+			padding-left: 20px;
+			line-height: 1;
+			margin: 0;
+			&:not(:last-child){
+				border-right: 1px solid $color-white;
+			}
+			&:first-child{
+				padding-left: 0;
+			}
+			&:last-child{
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+/*-- 05.01 - Sticky Header --*/
+.sticky-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    margin: 0;
+    background-color: $color-white;
+    @include animation(fadeInDown .8s ease-in-out);
+    @include box-shadow(0 1px 3px rgba(0,0,0,.14));
+    .header__top{
+        display: none;
+    }
+} 
+
+
+/*-- 05.02 - Sticky Header --*/
+
+.site-info{
+	@include flexbox;
+	@include justify-content(flex-end);
+	&.vertical{
+		@include justify-content(flex-start);
+	}
+	&__item{
+        @include flex-grow(0);
+        @include flex-basis(20%);
+	}
+}

@@ -1,0 +1,73 @@
+/*****************************
+22 - Components - Service
+*****************************/
+
+.service{
+	&__image{
+		margin-bottom: 20px;
+		@extend %posrelative;
+		@extend %overflowHidden;
+		img{
+			@include transition(all .3s .25s);
+		}
+	}
+	&__title{
+		@extend %fontSize18;
+		@extend %margin0;
+	}
+	&__category{
+		@extend %displayInlineBlock;
+		@extend %posrelative;
+		@extend %primary-color;
+		@extend %fontWeight700;
+		@extend %fontSize18;
+		@extend %lineheight1;
+		padding-left: 30px;
+		&:before{
+			@extend %pseudo;
+			@extend %left-0;
+			@extend %vCenter;
+			@extend %primary-bg-color;
+			width: 20px;
+			height: 2px;
+		}
+	}
+	&:hover{
+		.item-overlay{
+			@extend %visible;
+			@extend %width100;
+			@extend %height100;
+		}
+		.service{
+			&__image{
+				img{
+					@include transform(scale(1.1));
+				}
+			}
+		}
+	}
+}
+
+
+.service-box{
+	&__icon{
+		margin-bottom: 26px;
+		span{
+			@extend %primary-color;
+			font-size: 70px;
+			@extend %lineheight1;	
+		}
+	}
+	&__info{
+
+	}
+	&__title{
+		@extend %fontSize18;
+		color: $color-dark;
+	}
+	&__desc{
+		@extend %fontSize14;
+		@extend %fontWeight500;
+		line-height: 1.5;
+	}
+}

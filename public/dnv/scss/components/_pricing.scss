@@ -1,0 +1,59 @@
+/*****************************
+20 - Components - Pricing
+*****************************/
+
+.pricing{
+	padding-top: 20px;
+	&__inner{
+		padding-top: 43px;
+		padding-left: 35px;
+		padding-right: 35px;
+		padding-bottom: 46px;
+		margin-bottom: 25px;
+		@extend %posrelative;
+		@extend %basetransition;
+		@include box-shadow(0px 0px 9px 0px rgba(0, 0, 0, 0.05));
+		&:hover{
+			@include box-shadow(0px 0px 20px 0px rgba(0, 0, 0, 0.1));
+		} 
+	}
+	&__header{
+		@extend %textCenter;
+		margin-bottom: 24px;
+	}
+	&__icon{
+		margin-bottom: 40px;
+		min-height: 88px;
+	}
+	&__body{
+		@extend %textCenter;
+	}
+	&__desc{
+		margin-bottom: 31px;
+	}
+	&__price{
+		&--sub{
+			@extend %displayBlock;
+			@extend %textUpper;
+			@extend %fontSize14;
+			@extend %fontWeight500;
+		}
+		&--main{
+			@extend %displayBlock;
+			@extend %textUpper;
+		    font-size: 40px;
+		    margin-top: 10px;
+		    margin-bottom: 12px;
+		}
+	}
+	&__footer{
+		@extend %textCenter;
+		@extend %posabsolute;
+		@extend %hCenter;
+		bottom: -25px;
+		.btn{
+			padding: 12px 44px;
+		}
+	}
+}
+
