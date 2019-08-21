@@ -4,102 +4,33 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Dnvcomp - Web разработка</title>
-    <meta name="description" content="">
+    <meta name="description" content="Dnvcomp-Web developers">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicons -->
     <link rel="shortcut icon" href="{{ asset(env('DNV')) }}/assets/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="{{ asset(env('DNV')) }}/assets/img/icon.png">
-    <!-- ************************* CSS Files ************************* -->
-    <!-- Vendor CSS -->
     <link rel="stylesheet" href="{{ asset(env('DNV')) }}/assets/css/vendor.css">
-    <!-- style css -->
     <link rel="stylesheet" href="{{ asset(env('DNV')) }}/assets/css/main.css">
 </head>
-
 <body>
-
 <!-- Main Wrapper Start -->
 <div class="wrapper">
     <!-- Header Start -->
     <header class="header">
         <div class="header__inner fixed-header">
-
             <!-- Header top -->
             @yield('headerTop')
             <!-- Header top end-->
-
             <!-- Header navigation -->
             @yield('navigation')
             <!-- Header navigation end -->
         </div>
     </header>
     <!-- Header End -->
-
     <!-- Main Content Wrapper Start -->
     <main class="main-content-wrapper">
         <!-- Slider area Start -->
-        <section class="homepage-slider mb--10pt">
-            <div class="element-carousel"
-                 data-slick-options='{
-                    "slidesToShow": 1,
-                    "autoplay": true
-                }'>
-                <div class="single-slide d-flex align-items-center" style="background-image: url('../dnv/assets/img/slider/slider-01.png');">
-                    <div class="container">
-                        <div class="row no-gutters">
-                            <div class="col-lg-6 col-sm-8">
-                                <div class="slider-content">
-                                    <h1 class="heading__primary mb--3pt6" data-animation="fadeInUp" data-duration=".3s" data-delay=".3s">Financial solutions for New business.</h1>
-                                    <a href="#" class="btn" data-animation="fadeInUp" data-duration=".3s" data-delay=".6s">Financial Services</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="single-slide d-flex align-items-center" style="background-image: url('../dnv/assets/img/slider/slider-02.png');">
-                    <div class="container">
-                        <div class="row no-gutters">
-                            <div class="col-lg-6 col-sm-8">
-                                <div class="slider-content">
-                                    <h1 class="heading__primary mb--3pt6" data-animation="fadeInUp" data-duration=".3s" data-delay=".3s">Financial solutions for New business.</h1>
-                                    <a href="#" class="btn" data-animation="fadeInUp" data-duration=".3s" data-delay=".6s">Financial Services</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="single-slide d-flex align-items-center" style="background-image: url('../dnv/assets/img/slider/slider-03.jpg');">
-                    <div class="container">
-                        <div class="row no-gutters">
-                            <div class="col-lg-6 col-sm-8">
-                                <div class="slider-content">
-                                    <h1 class="heading__primary mb--3pt6" data-animation="fadeInUp" data-duration=".3s" data-delay=".3s">Financial solutions for New business.</h1>
-                                    <a href="#" class="btn" data-animation="fadeInUp" data-duration=".3s" data-delay=".6s">Financial Services</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="single-slide d-flex align-items-center" style="background-image: url('../dnv/assets/img/slider/slider-04.png');">
-                    <div class="container">
-                        <div class="row no-gutters">
-                            <div class="col-lg-6 col-sm-8">
-                                <div class="slider-content">
-                                    <h1 class="heading__primary mb--3pt6" data-animation="fadeInUp" data-duration=".3s" data-delay=".3s">Financial solutions for New business.</h1>
-                                    <a href="#" class="btn" data-animation="fadeInUp" data-duration=".3s" data-delay=".6s">Financial Services</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+        @yield('slider')
         <!-- Slider area End -->
-
         <!-- Feature Area Start -->
         <section class="feature-area mb--9pt5">
             <div class="container">

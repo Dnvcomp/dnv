@@ -1,4 +1,4 @@
 <?php
     return [
-        // settings
+        'slider_path' => 'slider',
     ];

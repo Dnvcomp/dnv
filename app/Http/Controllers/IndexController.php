@@ -2,15 +2,17 @@
 
 namespace Dnv\Http\Controllers;
 
+use Dnv\Repositories\SlidersRepository;
 use Illuminate\Http\Request;
-
 use Dnv\Http\Requests;
+use Config;
 
 class IndexController extends DnvController
 {
-    public function __construct()
+    public function __construct(SlidersRepository $s_rep)
     {
         parent::__construct(new \Dnv\Repositories\MenusRepositopy(new \Dnv\Menu));
+        $this->s_rep = $s_rep;
         $this->bar = 'right';
         $this->template = env('DNV').'.index';
     }
@@ -22,7 +24,24 @@ class IndexController extends DnvController
      */
     public function index()
     {
+        $sliderItems = $this->getSliders();
+        $sliders = view(env('DNV').'.slider')->with('sliders',$sliderItems)->render();
+        $this->vars =array_add($this->vars,'sliders',$sliders);
+
         return $this->renderOutput();
+    }
+
+    public function getSliders()
+    {
+        $sliders = $this->s_rep->get();
+        if ($sliders->isEmpty()) {
+            return false;
+        }
+        $sliders->transform(function ($item, $key) {
+            $item->img = Config::get('settings.slider_path').'/'.$item->img;
+            return $item;
+        });
+            return $sliders;
     }
 
     /**
