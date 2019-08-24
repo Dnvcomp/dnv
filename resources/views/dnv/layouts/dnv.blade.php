@@ -35,34 +35,11 @@
         <div class="inner-page-content mt--9pt4">
             <div class="container">
                 <div class="row mb--10pt">
-                    <div class="col-lg-9 mb-md--50">
-                        <div class="row">
-                            <div class="col-12 mb--50">
-                                <div class="blog format-standard">
-                                    <div class="blog__inner">
-                                        <div class="blog__media">
-                                            <figure class="image">
-                                                <img src="{{ asset(env('DNV')) }}/assets/img/blog/blog-06.jpg" alt="Blog-image" class="w-100">
-                                                <a href="#" class="item-overlay"></a>
-                                            </figure>
-                                        </div>
-                                        <div class="blog__info">
-                                            <h3 class="blog__title"><a href="#">Finance planing for a startup business</a></h3>
-                                            <div class="blog__meta">
-                                                <span class="posted-on">21.08.2019</span>
-                                                <span class="posted-by"></span>By:&nbsp</div>
-                                                <a href="#">Robert Joe</a>
-                                            </div>
-                                            <div class="blog__desc">
-                                                <p>Financial services must tie these three factors together – customer experience, best practices and reliability/responsiveness – to have an effective web presence. They can’t go hard into one particular area and ignore the others.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- content -->
+                    @yield('content')
+                    <!-- / content -->
 
+                    <!-- Block right 1 -->
                     <div class="col-lg-3">
                         <div class="blog-sidebar pl--15 pl-lg--0">
                             <div class="bl-widget author">
@@ -81,7 +58,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <!-- Block right 2 -->
                             <div class="bl-widget quote mt--50">
                                 <div class="inner">
                                     <div class="post-quote">
@@ -96,17 +73,18 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <!-- / Block right 2 -->
                         </div>
                     </div>
-
+                    <!-- / Block right 1 -->
                 </div>
             </div>
         </div>
+        <!-- / About -->
     </main>
-    <!-- Main Content Wrapper End -->
+    <!-- / Main Content Wrapper -->
 
-    <!-- Footer Start-->
+    <!-- Footer -->
     <footer class="footer bg-color" data-bg-color="#F6F7FA">
         <div class="footer-top border-bottom pt--70 pb--65 pb-sm--60">
             <div class="container">

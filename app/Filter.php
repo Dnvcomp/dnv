@@ -1,0 +1,10 @@
+<?php
+
+namespace Dnv;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Filter extends Model
+{
+    //
+}
