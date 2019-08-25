@@ -5,7 +5,7 @@
                 <div class="header__middle-inner">
                     <div class="header__middle-left">
                         <div class="logo">
-                            <a href="index.html" class="logo--normal">
+                            <a href="{{ url('/') }}" class="logo--normal">
                                 <img src="{{ asset(env('DNV')) }}/assets/img/logo/logo.jpg" alt="Logo">
                             </a>
                         </div>

@@ -13,11 +13,14 @@ class DnvController extends Controller
     protected $s_rep;
     protected $a_rep;
     protected $m_rep;
+    protected $keywords;
+    protected $description;
+    protected $title;
     protected $template;
     protected $vars = array();
     protected $contentRightBar = false;
     protected $contentLeftBar = false;
-    protected $bar = false;
+    protected $bar = 'no';
 
     public function __construct(MenusRepositopy $m_rep)
     {
@@ -33,6 +36,23 @@ class DnvController extends Controller
         // Header navigation
         $navigation = view(env('DNV').'.navigation')->with('menu',$menu)->render();
         $this->vars = array_add($this->vars,'navigation',$navigation);
+        // Content
+        if ($this->contentRightBar) {
+            $rightBar = view(env('DNV').'.rightBar')->with('content_rightBar',$this->contentRightBar)->render();
+            $this->vars = array_add($this->vars,'rightBar',$rightBar);
+        }
+        // Bar
+        $this->vars = array_add($this->vars,'bar',$this->bar);
+        // Keywords, description, title
+        $this->vars = array_add($this->vars,'keywords',$this->keywords);
+        $this->vars = array_add($this->vars,'description',$this->description);
+        $this->vars = array_add($this->vars,'title',$this->title);
+        // Footer
+        $footer = view(env('DNV').'.footer')->render();
+        $this->vars = array_add($this->vars,'footer',$footer);
+        // OffCanvas
+        $offCanvas = view(env('DNV').'.offCanvas')->with('menu',$menu)->render();
+        $this->vars = array_add($this->vars,'offCanvas',$offCanvas);
 
         return view($this->template)->with($this->vars);
     }

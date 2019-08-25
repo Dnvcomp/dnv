@@ -4,6 +4,7 @@
         <div class="col-12 mb--50">
             <div class="blog format-standard">
                 <div class="blog__inner">
+                    <h3 class="text-left">{{ trans('ru.Latest_articles') }}</h3><br>
                     @foreach($portfolios as $key=>$item)
                         @if($key == 0)
                             <div class="blog__media">
@@ -15,13 +16,12 @@
                             <div class="blog__info">
                                 <h3 class="blog__title"><a href="{{ route('portfolios.show',['alias'=>$item->alias]) }}">{{ $item->title }}</a></h3>
                                 <div class="blog__meta">
-                                    <span class="posted-on">21.08.2019</span>
-                                    <span class="posted-by"></span>By:&nbsp</div>
-                                <a href="#">{{ $item->filter->title }}</a>
-                            </div>
-                            <div class="blog__desc">
-                                <p>{{ str_limit($item->text,200) }}</p>
-                                <a href="{{ route('portfolios.show',['alias'=>$item->alias]) }}" class="btn" data-animation="fadeInUp" data-duration=".3s" data-delay=".6s">Read more</a>
+                                    <a href="#">{{ $item->filter->title }}</a>
+                                </div>
+                                <div class="blog__desc">
+                                    <p>{{ str_limit($item->text,200) }}</p>
+                                    <a href="{{ route('portfolios.show',['alias'=>$item->alias]) }}" class="btn" data-animation="fadeInUp" data-duration=".3s" data-delay=".6s">{{ trans('ru.Read_more') }}</a>
+                                </div>
                             </div>
                             @continue
                         @endif
@@ -70,5 +70,5 @@
     </div>
 </div>
 @else
-    <h2> Cтатей и комментариев нет.</h2>
+    <h2>{{ trans('ru.Articles_comment_no') }}</h2>
 @endif
