@@ -9,8 +9,7 @@
     <meta name="email" content="dnvcomp@hotmail.com">
     <title>{{ $title or 'Dnvcomp - Web разработка' }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="{{ asset(env('DNV')) }}/assets/img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="{{ asset(env('DNV')) }}/assets/img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="{{ asset(env('DNV')) }}/assets/css/vendor.css">
     <link rel="stylesheet" href="{{ asset(env('DNV')) }}/assets/css/main.css">
 </head>

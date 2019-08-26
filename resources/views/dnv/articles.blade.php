@@ -1,15 +1,11 @@
 @extends(env('DNV').'.layouts.dnv')
 
 @section('headerTop')
-{!! $headerTop !!}
+    {!! $headerTop !!}
 @endsection
 
 @section('navigation')
     {!! $navigation !!}
-@endsection
-
-@section('slider')
-    {!! $sliders !!}
 @endsection
 
 @section('content')
@@ -17,7 +13,7 @@
 @endsection
 
 @section('bar')
-    {!! $rightBar !!}
+    {!! $rightBar or '' !!}
 @endsection
 
 @section('footer')
