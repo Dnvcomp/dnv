@@ -14,7 +14,8 @@
                             <div class="blog__info">
                                 <a href="{{ route('articles.show',['alias'=>$article->alias]) }}"><h3 class="page__title">{{ $article->title }}</h3><br></a>
                                 <div class="blog__desc">
-                                    <p>{!! $article->text !!}</p>
+                                    <p>{!! $article->desc !!}</p>
+                                    <a href="{{ route('articles.show',['alias'=>$article->alias]) }}" class="read-more-btn">{{ trans('ru.Read_more') }}</a>
                                 </div>
                                 <br>
                                 <section class="feature-area mb--9pt5">
@@ -69,5 +70,30 @@
                 </div>
             </div>
         </div>
+        <!-- Pagination -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <ul class="pagination">
+                    @if($articles->lastPage() > 1)
+                        @if($articles->currentPage() !== 1)
+                            <li><a href="{{ $articles->url(($articles->currentPage() - 1)) }}" class="page-number">{{ trans('pagination.previous') }}</a></li>
+                        @endif
+                        @for($i = 1; $i <= $articles->lastPage(); $i++)
+                                @if($articles->currentPage() == $i)
+                                    <li><a class="disabled">{{ $i }}</a></li>
+                                @else
+                                    <li><a href="{{ $articles->url($i) }}" class="page-number">{{ $i }}</a></li>
+                                @endif
+                            @endfor
+                            @if($articles->currentPage() !== $articles->lastPage())
+                                <li><a href="{{ $articles->url(($articles->currentPage() + 1)) }}" class="page-number">{{ trans('pagination.next') }}</a></li>
+                            @endif
+                    @endif
+                </ul>
+            </div>
+        </div>
+        <div class="mb--50"></div>
     </div>
+    @else
+    {!! trans('ru.Articles_comment_no') !!}
 @endif

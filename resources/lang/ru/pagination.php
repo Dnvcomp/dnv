@@ -10,6 +10,6 @@ return [
     | you want to customize your views to better match your application.
     |
     */
-    'previous' => '&laquo; Назад',
-    'next'     => 'Вперед &raquo;',
+    'previous' => '&laquo;',
+    'next'     => '&raquo;',
 ];
