@@ -296,19 +296,22 @@ a, a:hover, a:focus, a:active, button, button:focus, input, select, textarea, .s
   border-radius: 0; }
 
 .border-top, .border-bottom, .border-left, .border-right {
-  border-color: #dadada !important; }
+  border-color: #002257 !important;
+}
 
 .bl-widget, .social-outline .social__link {
-  border: 1px solid #dadada; }
+    border: 1px solid #002257;
+    border-radius: 5px;
+}
 
 .bl-widget.author .inner .info .autor-meta span + span {
-  border-left: 1px solid #dadada; }
+  border-left: 1px solid #002257; }
 
 .bl-widget.author .inner .info .autor-meta {
-  border-top: 1px solid #dadada; }
+  border-top: 1px solid #002257; }
 
 .single-post__header {
-  border-bottom: 1px solid #dadada; }
+  border-bottom: 1px solid #002257; }
 
 .slick-dots li button, .newsletter-form__btn {
   border: none; }
@@ -1301,7 +1304,7 @@ a, button, .item-overlay, .global-overlay, .pagination li .page-number, .btn, .s
 12 - Components - Button
 *****************************/
 .btn {
-  color: #fefeff;
+  color: #00FF7F;
   background-color: #002257;
   padding: 15px 39px; }
   @media (max-width: 61.94em) {
@@ -1314,7 +1317,7 @@ a, button, .item-overlay, .global-overlay, .pagination li .page-number, .btn, .s
     background-color: transparent;
     border-width: 1px;
     border-style: solid;
-    border-color: #002257; }
+    border-color: #00FF7F; }
   .btn-white {
     border-color: #ffffff; }
   .btn-shape-round {
@@ -1332,10 +1335,10 @@ a, button, .item-overlay, .global-overlay, .pagination li .page-number, .btn, .s
   .btn-hover-1:hover {
     background-color: #ffffff;
     border-color: #ffffff;
-    color: #002257; }
+    color: #00FF7F; }
 
 .read-more-btn {
-  border-bottom: 1px solid #dadada; }
+  border-bottom: 1px solid #00FF7F; }
 
 /*****************************
 13 - Components - Carousel

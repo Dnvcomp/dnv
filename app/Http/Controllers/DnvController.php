@@ -13,6 +13,7 @@ class DnvController extends Controller
     protected $s_rep;
     protected $a_rep;
     protected $m_rep;
+    protected $c_rep;
     protected $keywords;
     protected $description;
     protected $title;

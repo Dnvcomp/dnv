@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="">
+    <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="Sliders">
+      <change afterPath="$PROJECT_DIR$/app/Repositories/CommentsRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dnv/articlesBar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ru/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/articles_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/articles_content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DnvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DnvController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dnv/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ru/ru.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/ru.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dnv/articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/articles.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +167,8 @@
       <workItem from="1566732521706" duration="17190000" />
       <workItem from="1566816212522" duration="6343000" />
       <workItem from="1567100432641" duration="89000" />
-      <workItem from="1567101191466" duration="2529000" />
+      <workItem from="1567101191466" duration="12774000" />
+      <workItem from="1567189456533" duration="4041000" />
     </task>
     <task id="LOCAL-00001" summary="Sliders">
       <created>1566394911098</created>

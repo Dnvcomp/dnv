@@ -1,6 +1,7 @@
 <?php
     return [
         'Latest_articles' => 'Последние статьи',
+        'Latest_comments' => 'Последние комментарии',
         'Latest_post' => 'Последний пост',
         'Login' => 'Войти',
         'Register' => 'Регистрация',
@@ -8,4 +9,5 @@
         'Articles_comment_no' => 'Cтатей и комментариев нет.',
         'welcome_dnvcomp' => 'Добро пожаловать',
         'comments' => 'Комментарий|Комментария|Комментариев|',
+        'articles' => 'Статьи',
     ];
