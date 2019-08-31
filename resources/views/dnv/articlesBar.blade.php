@@ -29,15 +29,18 @@
                     @foreach($comments as $comment)
                         <ul class="post-list">
                             <li>
-                                <a class="read-more-btn" href="{{ route('articles.show',['alias'=>$comment->article->alias]) }}"><i class="fa fa-user"></i>&nbsp;&nbsp;{{ isset($comment->user) ? $comment->user->name : $comment->name }}</a>
                                 <div class="mb--20"></div>
-                                <a class="page-title" href="{{ route('articles.show',['alias'=>$comment->article->alias]) }}">{{ $comment->article->title }}</a>
-                                <div class="mb--5"></div>
+                                @set($hash,($comment->email) ? md5($comment->email) : $comment->user->email)
+                                <img src="https://www.gravatar.com/avatar/{{ $hash }}?d=mm&s=55" alt="Avatar" style="float: left; margin-right: 10px; margin-top: 11px; margin-bottom: 4px; border-radius: 26px;"><br>
+                                <a class="page-title mb--5" href="{{ route('articles.show',['alias'=>$comment->article->alias]) }}">{{ $comment->article->title }}</a>
+                                <a class="read-more-btn" href="{{ route('articles.show',['alias'=>$comment->article->alias]) }}">{{ isset($comment->user) ? $comment->user->name : $comment->name }}</a>
                             </li>
                         </ul>
                     @endforeach
                 </div>
+                <div class="mb-md--7pt7"></div>
             </div>
+            <div class="mb--50"></div>
         @endif
         <!-- // Block RightBar 2 -->
     </div>
