@@ -5,6 +5,7 @@ namespace Dnv\Http\Controllers;
 use Dnv\Repositories\ArticlesRepository;
 use Dnv\Repositories\CommentsRepository;
 use Dnv\Repositories\PortfoliosRepository;
+use Dnv\Category;
 use Illuminate\Http\Request;
 
 use Dnv\Http\Requests;
@@ -20,9 +21,9 @@ class ArticlesController extends DnvController
         $this->bar = 'right';
         $this->template = env('DNV').'.articles';
     }
-    public function index()
+    public function index($cat_alias = false)
     {
-        $articles = $this->getArticles();
+        $articles = $this->getArticles($cat_alias);
         $content = view(env('DNV').'.articles_content')->with('articles',$articles)->render();
         $this->vars = array_add($this->vars,'content',$content);
         $comments = $this->getComments(config('settings.latest_comments'));
@@ -48,10 +49,32 @@ class ArticlesController extends DnvController
 
     public function getArticles($alias = false)
     {
-        $articles = $this->a_rep->get(['id','title','text','alias','created_at','img','desc','user_id','category_id'], false, true);
+        $where = false;
+        if ($alias) {
+            $id = Category::select('id')->where('alias',$alias)->first()->id;
+            $where = ['category_id',$id];
+        }
+        $articles = $this->a_rep->get(['id','title','text','alias','created_at','img','desc','user_id','category_id'], false, true, $where);
         if ($articles) {
             $articles->load('user','category','comments');
         }
         return $articles;
+    }
+
+    public function show($alias = false)
+    {
+        $article = $this->a_rep->one($alias,['comments' => true]);
+        if ($article) {
+            $article->img = json_decode($article->img);
+        }
+        $content = view(env('DNV').'.article_content')->with('article',$article)->render();
+        $this->vars =array_add($this->vars,'content',$content);
+
+        $comments = $this->getComments(config('settings.latest_comments'));
+        $portfolios = $this->getPortfolios(config('settings.latest_portfolios'));
+
+        $this->contentRightBar = view(env('DNV').'.articlesBar')->with(['comments' => $comments, 'portfolios' => $portfolios])->render();
+
+        return $this->renderOutput();
     }
 }

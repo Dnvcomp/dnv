@@ -440,10 +440,10 @@ a, button, .item-overlay, .global-overlay, .pagination li .page-number, .btn, .s
   font-size: 14px; }
 
 .bl-widget.author .inner .info .degne, .bl-widget.post .inner .post-list li a, .single-post__meta .posted-by span {
-  font-size: 13px; }
-
+  font-size: 15px; }
 .comment-reply-link, .portfolio__link, .service__category {
-  font-weight: 700; }
+  font-weight: 700;
+}
 
 .single-post__info blockquote, .related-post__title, .feature__desc, .pricing__price--sub, .service-box__desc, .homepage-slider .custom-paging .total, .testimonial-style-2 .testimonial__author--name {
   font-weight: 500; }
@@ -1429,7 +1429,8 @@ a, button, .item-overlay, .global-overlay, .pagination li .page-number, .btn, .s
 
 .comment-info {
   margin-left: 120px;
-  border: 2px solid #dadada;
+  border: 2px solid #00FF7F;
+  border-radius: 10px;
   padding: 20px 30px; }
   @media (max-width: 35.94em) {
     .comment-info {
@@ -1531,16 +1532,16 @@ a, button, .item-overlay, .global-overlay, .pagination li .page-number, .btn, .s
   padding-top: 0;
   padding-bottom: 19px;
   border: none;
-  border-bottom: 1px solid #e7e7e7;
-  color: #979797; }
+  border-bottom: 1px solid #00FF7F;
+  color: #263637; }
   .form__input::-webkit-input-placeholder {
-    color: #979797; }
+    color: #000000; }
   .form__input:-moz-placeholder {
-    color: #979797; }
+    color: #000000; }
   .form__input::-moz-placeholder {
-    color: #979797; }
+    color: #000000; }
   .form__input:-ms-input-placeholder {
-    color: #979797; }
+    color: #000000; }
   .form__input--textarea {
     height: 100px; }
 

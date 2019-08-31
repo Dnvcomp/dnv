@@ -15,7 +15,7 @@
                                 <a href="{{ route('articles.show',['alias'=>$article->alias]) }}"><h3 class="page__title">{{ $article->title }}</h3><br></a>
                                 <div class="blog__desc">
                                     <p>{!! $article->desc !!}</p>
-                                    <a href="{{ route('articles.show',['alias'=>$article->alias]) }}" class="read-more-btn">{{ trans('ru.Read_more') }}</a>
+                                    <a href="{{ route('articles.show',['alias'=>$article->alias]) }}" class="btn mb--9pt5" data-animation="fadeInUp" data-duration=".3s" data-delay=".6s">{{ trans('ru.Read_more') }}</a>
                                 </div>
                                 <br>
                                 <section class="feature-area mb--9pt5">
