@@ -16,11 +16,9 @@
                                 <p>{!! $article->desc !!}</p>
                             </div>
                             <br><br>
-
                             <section class="feature-area mb--9pt5">
                                 <div class="container">
                                     <div class="row no-gutters gutter-lg-30 justify-content-between">
-
                                         <div class="col-xl-3 col-md-4 mb-sm--45">
                                             <div class="feature">
                                                 <div class="feature__icon text-center">
@@ -33,7 +31,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="col-xl-3 col-md-4 mb-sm--45">
                                             <div class="feature">
                                                 <div class="feature__icon text-center">
@@ -46,7 +43,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="col-xl-3 col-md-4">
                                             <div class="feature">
                                                 <div class="feature__icon text-center">
@@ -59,76 +55,62 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </section>
-                            <!-- Start form comments -->
                             <div class="row mt--50">
                                 <div class="container">
                                     <section class="comment">
-                                        <h2 class="comment-title mb--25"><i class="fa fa-comments">&nbsp;</i>{{ count($article->comments) ? count($article->comments) : '0' }} {{ Lang::choice('ru.comments',count($article->comments)) }}</h2>
-                                        <ul class="comment-list mb--45">
-                                            <li>
-                                                <div class="single-comment">
-
-                                                    <div class="comment-info">
-                                                        <div class="comment-meta">
-                                                            <figure class="comment-avatar">
-                                                                <img src="{{ asset(env('DNV')) }}/assets/img/others/avatar-large-2.png" alt="Comment avatar">
-                                                            </figure>
-                                                            <h4>Carlos</h4>
-                                                            <div class="metadata">
-                                                                <span class="comment-date">February 07, 2019</span>
-                                                                <a href="#" class="comment-reply-link"># Reply</a>
+                                        <h2 class="comment-title mb--25"><i class="fa fa-comments">&nbsp;</i>{{ count($article->comments) }} {{ Lang::choice('ru.comments',count($article->comments)) }}</h2>
+                                        @if(count($article->comments) > 0)
+                                            @set($com,$article->comments->groupBy('parent_id'))
+                                            <ul class="comment-list mb--45">
+                                                @foreach($com as $key => $comments)
+                                                    @if($key !== 0)
+                                                        @break
+                                                    @endif
+                                                        @include(env('DNV').'.comment',['items' => $comments])
+                                                @endforeach
+                                            </ul>
+                                        @endif
+                                        <div class="comment-respond" id="comment">
+                                            <div id="respond">
+                                                <h3 class="comment-reply-title">{{ trans('ru.reply_and_comment') }}</h3>
+                                                <form action="#" class="form comm-form">
+                                                    <div class="form__group mb--25 mb-sm--20">
+                                                        <div class="form-row">
+                                                            <div class="col-md-4 mb-sm--20">
+                                                                <input type="text" name="comment_name" id="comment_name" class="form__input" placeholder="{{ trans('ru.name') }}">
+                                                            </div>
+                                                            <div class="col-md-4 mb-sm--20">
+                                                                <input type="email" name="comment_email" id="comment_email" class="form__input" placeholder="{{trans('ru.email')}}">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <input type="url" name="comment_website" id="comment_website" class="form__input" placeholder="{{ trans('ru.web_site') }}">
                                                             </div>
                                                         </div>
-                                                        <div class="comment-content">
-                                                            <p>Hi, this is a comment.<br> To delete a comment, just log in and view the post's comments. There you will have the option to edit or delete them.</p>
-                                                        </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                        </ul>
 
-                                        <div class="comment-respond" id="comments">
-                                            <h3 class="comment-reply-title">{{ trans('ru.reply_and_comment') }}</h3>
-                                            <form action="#" class="form comm-form">
-                                                <div class="form__group mb--25 mb-sm--20">
-                                                    <div class="form-row">
-                                                        <div class="col-md-4 mb-sm--20">
-                                                            <input type="text" name="comment_name" id="comment_name" class="form__input" placeholder="{{ trans('ru.name') }}">
-                                                        </div>
-                                                        <div class="col-md-4 mb-sm--20">
-                                                            <input type="email" name="comment_email" id="comment_email" class="form__input" placeholder="{{trans('ru.email')}}">
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <input type="url" name="comment_website" id="comment_website" class="form__input" placeholder="{{ trans('ru.web_site') }}">
+                                                    <div class="form_group mb--25 mb-sm--20">
+                                                        <div class="form-row">
+                                                            <div class="col-12">
+                                                                <textarea name="review" id="review" class="form__input form__input--textarea" placeholder="{{ trans('ru.comment') }}"></textarea>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-
-                                                <div class="form_group mb--25 mb-sm--20">
-                                                    <div class="form-row">
-                                                        <div class="col-12">
-                                                            <textarea name="review" id="review" class="form__input form__input--textarea" placeholder="{{ trans('ru.comment') }}"></textarea>
+                                                    <div class="form__group">
+                                                        <div class="form-row">
+                                                            <div class="col-12">
+                                                                <button type="submit" class="btn">{{ trans('ru.submit') }}</button>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="form__group">
-                                                    <div class="form-row">
-                                                        <div class="col-12">
-                                                            <button type="submit" class="btn">{{ trans('ru.submit') }}</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
+                                                </form>
+                                            </div>
                                         </div>
-
                                     </section>
                                 </div>
                             </div>
-                            <!-- End form comments -->
                         </div>
                     </div>
                 </div>

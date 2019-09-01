@@ -1414,10 +1414,10 @@ a, button, .item-overlay, .global-overlay, .pagination li .page-number, .btn, .s
   font-size: 24px; }
 
 .comment-list > li:last-child > .single-comment:only-child {
-  margin-bottom: 0; }
+  margin-bottom: 0px; }
 
 .comment-list > li:last-child .children > li:last-child .single-comment {
-  margin-bottom: 0; }
+  margin-bottom: 0px; }
 
 .comment .single-comment {
   margin-bottom: 20px; }
@@ -1460,8 +1460,9 @@ a, button, .item-overlay, .global-overlay, .pagination li .page-number, .btn, .s
   margin-left: 20px; }
 
 .comment-reply-title {
-  margin-bottom: 27px;
-  font-size: 24px; }
+    margin-bottom: 27px;
+    padding-top: 140px;
+    font-size: 24px; }
 
 /*****************************
 15 - Components - Feature

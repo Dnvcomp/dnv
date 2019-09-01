@@ -67,6 +67,7 @@ class ArticlesController extends DnvController
         if ($article) {
             $article->img = json_decode($article->img);
         }
+
         $content = view(env('DNV').'.article_content')->with('article',$article)->render();
         $this->vars =array_add($this->vars,'content',$content);
 
