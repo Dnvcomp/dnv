@@ -73,40 +73,42 @@
                                                 @endforeach
                                             </ul>
                                         @endif
-                                        <div class="comment-respond" id="comment">
-                                            <div id="respond">
-                                                <h3 class="comment-reply-title">{{ trans('ru.reply_and_comment') }}</h3>
-                                                <form action="#" class="form comm-form">
-                                                    <div class="form__group mb--25 mb-sm--20">
-                                                        <div class="form-row">
+                                        <div id="respond" class="mb--9pt5">
+                                            <h3 class="comment-reply-title">{{ trans('ru.leave_reply') }}&nbsp;&nbsp;&nbsp;<smail><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display: none;">{{ trans('ru.Cancel_reply') }}</a></smail></h3>
+                                            <form action="{{ route('comment.store') }}" class="form comm-form" id="commentform" method="post">
+                                                <div class="form__group mb--25 mb-sm--20">
+                                                    <div class="form-row">
+                                                        @if(!Auth::check())
                                                             <div class="col-md-4 mb-sm--20">
-                                                                <input type="text" name="comment_name" id="comment_name" class="form__input" placeholder="{{ trans('ru.name') }}">
+                                                                <input type="text" name="name" id="name" class="form__input" placeholder="{{ trans('ru.name') }}">
                                                             </div>
                                                             <div class="col-md-4 mb-sm--20">
-                                                                <input type="email" name="comment_email" id="comment_email" class="form__input" placeholder="{{trans('ru.email')}}">
+                                                                <input type="email" name="email" id="email" class="form__input" placeholder="{{trans('ru.email')}}">
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <input type="url" name="comment_website" id="comment_website" class="form__input" placeholder="{{ trans('ru.web_site') }}">
+                                                                <input type="url" name="site" id="site" class="form__input" placeholder="{{ trans('ru.web_site') }}">
                                                             </div>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                                <div class="form_group mb--25 mb-sm--20">
+                                                    <div class="form-row">
+                                                        <div class="col-12">
+                                                            <textarea name="text" id="text" class="form__input form__input--textarea" placeholder="{{ trans('ru.comment') }}"></textarea>
                                                         </div>
                                                     </div>
-
-                                                    <div class="form_group mb--25 mb-sm--20">
-                                                        <div class="form-row">
-                                                            <div class="col-12">
-                                                                <textarea name="review" id="review" class="form__input form__input--textarea" placeholder="{{ trans('ru.comment') }}"></textarea>
-                                                            </div>
+                                                </div>
+                                                <div class="form__group">
+                                                    <div class="form-row">
+                                                        <div class="col-12">
+                                                            {{ csrf_field() }}
+                                                            <input id="comment_post_ID" type="hidden" name="comment_post_ID" value="{{ $article->id }}">
+                                                            <input id="comment_parent" type="hidden" name="comment_parent" value="0">
+                                                            <button name="submit" type="submit" id="submit" class="btn">{{ trans('ru.submit') }}</button>
                                                         </div>
                                                     </div>
-                                                    <div class="form__group">
-                                                        <div class="form-row">
-                                                            <div class="col-12">
-                                                                <button type="submit" class="btn">{{ trans('ru.submit') }}</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                                   </div>
+                                            </form>
                                         </div>
                                     </section>
                                 </div>
@@ -117,6 +119,4 @@
             </div>
         </div>
     </div>
-    @else
-    {!! trans('ru.Articles_comment_no') !!}
 @endif

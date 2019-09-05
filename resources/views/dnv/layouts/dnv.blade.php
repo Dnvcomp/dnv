@@ -5,6 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="{{ (isset($description)) ? $description : '' }}">
         <meta name="keywords" content="{{ (isset($keywords)) ? $keywords : '' }}">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="author" content="Mikolai Dziamko">
         <meta name="email" content="dnvcomp@hotmail.com">
         <title>{{ $title or 'Dnvcomp - Web разработка' }}</title>
@@ -12,7 +13,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="{{ asset(env('DNV')) }}/assets/css/vendor.css">
         <link rel="stylesheet" href="{{ asset(env('DNV')) }}/assets/css/main.css">
-        <script src="{{ asset(env('DNV')) }}/assets/js/comment-reply.js"></script>
     </head>
     <body>
         <!-- Main Wrapper Start -->
@@ -33,6 +33,7 @@
             <main class="main-content-wrapper">
                 <!-- Slider area Start -->
                 @yield('slider')
+                <div class="comment_result"></div>
                 <!-- Slider area End -->
                 <!-- Content -->
                 <div class="inner-page-content mt--9pt4">
@@ -67,5 +68,7 @@
         <!-- *** JS Files **  -->
         <script src="{{ asset(env('DNV')) }}/assets/js/vendor.js"></script>
         <script src="{{ asset(env('DNV')) }}/assets/js/main.js"></script>
+        <script src="{{ asset(env('DNV')) }}/assets/js/comment-reply.js"></script>
+        <script src="{{ asset(env('DNV')) }}/assets/js/comments.js"></script>
     </body>
 </html>
