@@ -60,7 +60,7 @@
                             </section>
                             <div class="row mt--50">
                                 <div class="container">
-                                    <section class="comment">
+                                    <section class="comment" id="comments">
                                         <h2 class="comment-title mb--25"><i class="fa fa-comments">&nbsp;</i>{{ count($article->comments) }} {{ Lang::choice('ru.comments',count($article->comments)) }}</h2>
                                         @if(count($article->comments) > 0)
                                             @set($com,$article->comments->groupBy('parent_id'))
