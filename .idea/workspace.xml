@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="Sliders">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_08_114627_Change_Articles_Table2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_08_125208_Change_Categories_Table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dnv/portfolios.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dnv/portfolios_content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dnv/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/js/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/dnv/assets/js/comments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/article_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/article_content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/content_one_comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/content_one_comment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PortfolioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ru/articles_content.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ru/ru.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/ru.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +176,8 @@
       <workItem from="1567437868379" duration="1311000" />
       <workItem from="1567499162707" duration="19949000" />
       <workItem from="1567791915815" duration="5996000" />
-      <workItem from="1567927038348" duration="8306000" />
+      <workItem from="1567927038348" duration="11564000" />
+      <workItem from="1567949590844" duration="11985000" />
     </task>
     <task id="LOCAL-00001" summary="Sliders">
       <created>1566394911098</created>

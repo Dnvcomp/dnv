@@ -24,8 +24,8 @@ class ArticlesController extends DnvController
     public function index($cat_alias = false)
     {
         $this->title = 'Статьи';
-        $this->keywords = 'string';
-        $this->description = 'string';
+        $this->keywords = 'Статьи, описание, авторы, текст, комментарии';
+        $this->description = 'Раздел статей разных авторов и комментариев к ним';
 
         $articles = $this->getArticles($cat_alias);
         $content = view(env('DNV').'.articles_content')->with('articles',$articles)->render();
