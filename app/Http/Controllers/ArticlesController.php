@@ -23,6 +23,10 @@ class ArticlesController extends DnvController
     }
     public function index($cat_alias = false)
     {
+        $this->title = 'Статьи';
+        $this->keywords = 'string';
+        $this->description = 'string';
+
         $articles = $this->getArticles($cat_alias);
         $content = view(env('DNV').'.articles_content')->with('articles',$articles)->render();
         $this->vars = array_add($this->vars,'content',$content);
@@ -54,7 +58,7 @@ class ArticlesController extends DnvController
             $id = Category::select('id')->where('alias',$alias)->first()->id;
             $where = ['category_id',$id];
         }
-        $articles = $this->a_rep->get(['id','title','text','alias','created_at','img','desc','user_id','category_id'], false, true, $where);
+        $articles = $this->a_rep->get(['id','title','text','alias','created_at','img','desc','user_id','category_id','keywords','description'], false, true, $where);
         if ($articles) {
             $articles->load('user','category','comments');
         }
@@ -67,6 +71,10 @@ class ArticlesController extends DnvController
         if ($article) {
             $article->img = json_decode($article->img);
         }
+
+        $this->title = $article->title;
+        $this->keywords = $article->keywords;
+        $this->description = $article->description;
 
         $content = view(env('DNV').'.article_content')->with('article',$article)->render();
         $this->vars =array_add($this->vars,'content',$content);

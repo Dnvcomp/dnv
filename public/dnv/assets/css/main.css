@@ -1430,6 +1430,7 @@ a, button, .item-overlay, .global-overlay, .pagination li .page-number, .btn, .s
 .comment-info {
   margin-left: 120px;
   border-bottom: 1px solid #00FF7F;
+  text-align: left;
   padding: 20px 30px; }
   @media (max-width: 35.94em) {
     .comment-info {
@@ -2568,4 +2569,13 @@ a, button, .item-overlay, .global-overlay, .pagination li .page-number, .btn, .s
   float: right;
   font-size: 150%;
   color: #AB3300;
+}
+.borBlue {
+  border: 2px solid #EEE8AA;
+  text-align: right;
+  border-radius: 12px;
+  background-color: #FBFFD4;
+  padding: 20px 30px;
+  margin-bottom: 25px;
+  list-style: none;
 }

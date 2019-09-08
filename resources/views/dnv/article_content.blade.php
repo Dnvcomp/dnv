@@ -75,7 +75,7 @@
                                         @endif
                                         <div id="respond" class="mb--9pt5">
                                             <h3 class="comment-reply-title">{{ trans('ru.leave_reply') }}&nbsp;&nbsp;&nbsp;<smail><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display: none;">{{ trans('ru.Cancel_reply') }}</a></smail></h3>
-                                            <form action="{{ route('comment.store') }}" class="form comm-form" id="commentform" method="post">
+                                            <form action="{{ route('comment.store') }}" class="form comm-form" id="commentForm" method="post">
                                                 <div class="form__group mb--25 mb-sm--20">
                                                     <div class="form-row">
                                                         @if(!Auth::check())

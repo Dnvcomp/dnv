@@ -1,4 +1,4 @@
-<li id="li-comment-{{ $data['id'] }}" class="borBlue">
+<li class="borBlue" id="li-comment-{{ $data['id'] }}">
     <div id="comment-{{ $data['id'] }}" class="single-comment">
         <figure class="comment-avatar">
             <img src="https://gravatar.com/avatar/{{ $data['hash'] }}?d=mm&s=90" alt="Avatar">
