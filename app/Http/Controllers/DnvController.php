@@ -37,10 +37,15 @@ class DnvController extends Controller
         // Header navigation
         $navigation = view(env('DNV').'.navigation')->with('menu',$menu)->render();
         $this->vars = array_add($this->vars,'navigation',$navigation);
-        // Content
+        // Content RightBar
         if ($this->contentRightBar) {
             $rightBar = view(env('DNV').'.rightBar')->with('content_rightBar',$this->contentRightBar)->render();
             $this->vars = array_add($this->vars,'rightBar',$rightBar);
+        }
+        // Content LeftBar
+        if ($this->contentLeftBar) {
+            $leftBar = view(env('DNV').'.leftBar')->with('content_leftBar',$this->contentLeftBar)->render();
+            $this->vars = array_add($this->vars,'leftBar',$leftBar);
         }
         // Bar
         $this->vars = array_add($this->vars,'bar',$this->bar);

@@ -65,6 +65,7 @@
             <!-- Global Overlay End -->
         </div>
         <!-- Main Wrapper End -->
+
         <!-- *** JS Files **  -->
         <script src="{{ asset(env('DNV')) }}/assets/js/vendor.js"></script>
         <script src="{{ asset(env('DNV')) }}/assets/js/main.js"></script>
