@@ -67,14 +67,18 @@ class ArticlesController extends DnvController
 
     public function show($alias = false)
     {
+		
+		
         $article = $this->a_rep->one($alias,['comments' => true]);
         if ($article) {
             $article->img = json_decode($article->img);
         }
-
-        $this->title = $article->title;
-        $this->keywords = $article->keywords;
-        $this->description = $article->description;
+		
+		if (isset($article->id)) {
+            $this->title = $article->title;
+            $this->keywords = $article->keywords;
+            $this->meta_desc = $article->meta_desc;
+        }
 
         $content = view(env('DNV').'.article_content')->with('article',$article)->render();
         $this->vars =array_add($this->vars,'content',$content);

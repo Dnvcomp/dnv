@@ -5,5 +5,6 @@
         'articles_count' => 2,
         'paginate' => 2,
         'latest_comments' => 3,
-        'latest_portfolios' => 2
+        'latest_portfolios' => 2,
+        'other_portfolios' => 8,
     ];

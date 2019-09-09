@@ -25,12 +25,28 @@ class PortfolioController extends DnvController
         return $this->renderOutput();
     }
 
-    public function getPortfolios()
+    public function getPortfolios($take = false, $paginate = true)
     {
-        $portfolios = $this->p_rep->get('*', FALSE, TRUE);
+        $portfolios = $this->p_rep->get('*', FALSE, $paginate);
         if ($portfolios) {
             $portfolios->load('filter');
         }
         return $portfolios;
     }
+
+    public function show($alias)
+    {
+        $portfolio = $this->p_rep->one($alias);
+        $portfolios = $this->getPortfolios(config('settings.other_portfolios'), false);
+
+        $this->title = $portfolio->title;
+        $this->keywords = $portfolio->keywords;
+        $this->description = $portfolio->description;
+
+        $content = view(env('DNV').'.portfolio_content')->with(['portfolio' => $portfolio, 'portfolios' => $portfolios])->render();
+        $this->vars =array_add($this->vars,'content',$content);
+
+        return $this->renderOutput();
+    }
+
 }

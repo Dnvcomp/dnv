@@ -2,14 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="Sliders">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_08_125208_Change_Categories_Table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/portfolios.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/portfolios_content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/blog/003-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/blog/004-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/blog/005-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/blog/006-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/blog/007-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/blog/008-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/001-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/002-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/003-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/004-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/005-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/006-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/007-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/008-800x561.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dnv/portfolio_content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PortfolioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ru/articles_content.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ru/ru.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/ru.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/PortfoliosRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PortfoliosRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-06-350x236.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-06-400x350.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-06-560x345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-07-350x236.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-07-560x345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-08-350x236.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-08-560x345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-09-350x236.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-09-560x345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-10-350x236.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-10-560x345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-11-350x236.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-11-350x236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/blog/blog-11-560x345.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/portfolio/portfolio-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dnv/articlesBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/articlesBar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dnv/portfolios_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/portfolios_content.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,6 +224,8 @@
       <workItem from="1567791915815" duration="5996000" />
       <workItem from="1567927038348" duration="11564000" />
       <workItem from="1567949590844" duration="11985000" />
+      <workItem from="1567972499947" duration="6503000" />
+      <workItem from="1568010862589" duration="8023000" />
     </task>
     <task id="LOCAL-00001" summary="Sliders">
       <created>1566394911098</created>

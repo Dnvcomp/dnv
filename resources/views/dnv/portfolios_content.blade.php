@@ -25,7 +25,7 @@
                 <hr style="border: 1px solid #00FF7F">
                 <h5>{{ $portfolio->created_at->format('d F, Y') }}</h5>
                 <hr style="border: 1px solid #00FF7F"><br>
-                <a href="{{ route('portfolios.show',['alias'=> $portfolio->alias]) }}" class="btn">{{ trans('ru.View') }}</a>
+                <a href="{{ route('portfolios.show',['alias'=> $portfolio->alias]) }}" class="btn mb--50">{{ trans('ru.View') }}</a>
             </div>
         </div>
     </div>

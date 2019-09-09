@@ -12,7 +12,7 @@
                         <div class="info">
                             <h5 class="mb--5">{{ $portfolio->title }}</h5>
                             <p class="mb--25">{{ str_limit($portfolio->text,75) }}</p>
-                            <a class="read-more-btn" href="{{ route('articles.show',['alias'=>$portfolio->alias]) }}">{{ trans('ru.Read_more') }}</a>
+                            <a class="read-more-btn" href="{{ route('portfolios.show',['alias'=>$portfolio->alias]) }}">{{ trans('ru.Read_more') }}</a>
                             <div class="mb--20"></div>
                         </div>
                     </div>
