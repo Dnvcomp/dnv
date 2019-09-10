@@ -28,7 +28,9 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected  $loginView;
+    protected $username = 'login';
+    protected $redirectTo = '/dnv';
 
     /**
      * Create a new authentication controller instance.
@@ -38,6 +40,16 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+        $this->loginView = env('DNV').'.login';
+    }
+
+    public function showLoginForm()
+    {
+        $view = property_exists($this, 'loginView') ? $this->loginView : '';
+        if (view()->exists($view)) {
+            return view($view)->with('title','Авторизация пользователя');
+        }
+        abort(404);
     }
 
     /**
@@ -51,7 +63,7 @@ class AuthController extends Controller
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:8|confirmed',
         ]);
     }
 

@@ -36,7 +36,7 @@
                     <input type="email" name="email" id="email" class="form__input mb--30" placeholder="{{ trans('ru.Email') }}">
                     <textarea class="form__input form__input--textarea mb--30" placeholder="{{ trans('ru.Your_message') }}" id="text" name="text"></textarea>
                     {{ csrf_field() }}
-                     <button type="submit" class="btn btn-shape-round form__submit">Send Request</button>
+                     <button type="submit" class="btn btn-shape-round form__submit">{{ trans('ru.Send') }}</button>
                  </form>
             </div>
             <script type="text/javascript">
