@@ -21,3 +21,7 @@ Route::match(['get','post'],'contacts',['uses'=>'ContactsController@index', 'as'
 Route::get('login','Auth\AuthController@showLoginForm');
 Route::post('login','Auth\AuthController@login');
 Route::get('logout','Auth\AuthController@logout');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

@@ -30,7 +30,7 @@ class AuthController extends Controller
      */
     protected  $loginView;
     protected $username = 'login';
-    protected $redirectTo = '/dnv';
+    protected $redirectTo = '/admin-part';
 
     /**
      * Create a new authentication controller instance.
