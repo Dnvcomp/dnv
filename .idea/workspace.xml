@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="Sliders">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/icons/error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/icons/info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/contact_content.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/contacts.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/leftBar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dnv/404.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DnvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DnvController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dnv/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ru/ru.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/ru.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/layouts/dnv.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/layouts/dnv.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -187,6 +177,8 @@
       <workItem from="1567972499947" duration="6503000" />
       <workItem from="1568010862589" duration="22188000" />
       <workItem from="1568056492421" duration="4546000" />
+      <workItem from="1568063526682" duration="40000" />
+      <workItem from="1568092472695" duration="5075000" />
     </task>
     <task id="LOCAL-00001" summary="Sliders">
       <created>1566394911098</created>

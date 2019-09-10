@@ -31,12 +31,12 @@ class DnvController extends Controller
     protected function renderOutput()
     {
         $menu = $this->getMenu();
-        // Header top
-        $headerTop = view(env('DNV').'.headerTop')->render();
-        $this->vars = array_add($this->vars,'headerTop',$headerTop);
         // Header navigation
         $navigation = view(env('DNV').'.navigation')->with('menu',$menu)->render();
         $this->vars = array_add($this->vars,'navigation',$navigation);
+        // Header top
+        $headerTop = view(env('DNV').'.headerTop')->render();
+        $this->vars = array_add($this->vars,'headerTop',$headerTop);
         // Content RightBar
         if ($this->contentRightBar) {
             $rightBar = view(env('DNV').'.rightBar')->with('content_rightBar',$this->contentRightBar)->render();
@@ -63,7 +63,7 @@ class DnvController extends Controller
         return view($this->template)->with($this->vars);
     }
 
-    protected function getMenu()
+    public function getMenu()
     {
         $menu = $this->m_rep->get();
         $mBuilder = Menu::make('MyNav', function ($m) use ($menu) {
