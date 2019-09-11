@@ -8,13 +8,6 @@
             <ul class="offcanvas-menu">
                 @include(env('DNV').'.linkOffCanvasItems',['items'=>$menu->roots()])
             </ul>
-
-            <!-- div class="site-info vertical">
-                <div class="site-info__item">
-                    <a href="tel:+01223566678"><strong>+01 2235 666 78</strong></a>
-                    <a href="mailto:Support@contixs.com">Support@contixs.com</a>
-                </div>
-            </div -->
         </nav>
     </div>
 </div>

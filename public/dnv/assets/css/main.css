@@ -2587,13 +2587,18 @@ a, button, .item-overlay, .global-overlay, .pagination li .page-number, .btn, .s
   padding: 20px 15px 20px 65px;
 }
 .error-box {
-  background: url("{{ asset(env('DNV') }}//assets/img/icons/error.png") no-repeat scroll 15px center #fff8dc;
+  background: url('../../assets/img/icons/error.png') no-repeat scroll 15px center #fff8dc;
   border: 1px solid #AC1E1C;
   color: #AC1E1C;
 }
 .info-box {
-  background: url("{{ asset(env('DNV') }}/assets/img/icons/info.png") no-repeat scroll 15px center #f4f4f4;
+  background: url("../../assets/img/icons/info.png") no-repeat scroll 15px center #f4f4f4;
   border: 1px solid #002257;
   color: #002257;
   width: auto;
+}
+.success-box {
+  background: url("../../assets/img/icons/check.png") no-repeat scroll 15px center #EBFAB6;
+  border: 1px solid #BBCC5B;
+  color: #599847;
 }
