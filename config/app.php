@@ -155,8 +155,8 @@ return [
         Dnv\Providers\AuthServiceProvider::class,
         Dnv\Providers\EventServiceProvider::class,
         Dnv\Providers\RouteServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
         'Lavary\Menu\ServiceProvider',
-
     ],
 
     /*
@@ -203,7 +203,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Menu' => 'Lavary\Menu\Facade',
-
+        'Form' => Collective\Html\FormFacade::class,
+        'Html'=> Collective\Html\Htmlfacade::class,
     ],
-
 ];

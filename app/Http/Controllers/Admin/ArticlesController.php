@@ -3,12 +3,23 @@
 namespace Dnv\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
 use Dnv\Http\Requests;
 use Dnv\Http\Controllers\Controller;
+use Dnv\Repositories\ArticlesRepository;
+use Gate;
 
-class ArticlesController extends Controller
+class ArticlesController extends AdminController
 {
+    public function __construct(ArticlesRepository $a_rep)
+    {
+        parent::__construct();
+        if (Gate::denies('VIEW_ADMIN_ARTICLES')) {
+            abort(403);
+        }
+        $this->a_rep = $a_rep;
+        $this->template = env('DNV').'.admin.articles';
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +27,14 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        //
+        $this->title = 'Редактор статей';
+        $articles = $this->getArticles();
+        $this->content = view(env('DNV').'.admin.articles_content')->with('articles',$articles)->render();
+        return $this->renderOutput();
+    }
+    public function getArticles()
+    {
+        return $this->a_rep->get();
     }
 
     /**
