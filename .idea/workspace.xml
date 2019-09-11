@@ -2,25 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="Sliders">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/admin/OffCanvas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/admin/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/admin/headerTop.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/admin/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/admin/linkMenuItems.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/admin/navigation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/layouts/admin.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/arrow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/login.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dnv/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ru/ru.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/ru.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/headerTop.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/headerTop.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/layouts/dnv.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/layouts/dnv.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/offCanvas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/offCanvas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/about/about-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/bg/bg-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/bg/bg-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/bg/blog-breadcrumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/bg/page_title_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/brand/brand-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/brand/brand-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/brand/brand-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/brand/brand-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/brand/brand-05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/services/service-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/services/service-02-image-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/services/service-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/services/service-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dnv/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/login.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -196,7 +199,7 @@
       <workItem from="1568092472695" duration="5104000" />
       <workItem from="1568123685943" duration="701000" />
       <workItem from="1568126039295" duration="10741000" />
-      <workItem from="1568192519240" duration="10969000" />
+      <workItem from="1568192519240" duration="23519000" />
     </task>
     <task id="LOCAL-00001" summary="Sliders">
       <created>1566394911098</created>
