@@ -2,6 +2,7 @@
 
 namespace Dnv\Http\Controllers\Admin;
 
+use Dnv\Category;
 use Illuminate\Http\Request;
 use Dnv\Http\Requests;
 use Dnv\Http\Controllers\Controller;
@@ -44,8 +45,23 @@ class ArticlesController extends AdminController
      */
     public function create()
     {
-        //
-    }
+        if(Gate::denies('save', new \Dnv\Article)) {
+            abort(403);
+        }
+        $this->title = 'Добаввление нового материала';
+        $categories = Category::select(['title','alias','parent_id','id'])->get();
+        $lists = array();
+        foreach($categories as $category) {
+            if($category->parent_id == 0) {
+                $lists[$category->title] = array();
+            }
+            else {
+                $lists[$categories->where('id',$category->parent_id)->first()->title][$category->id] = $category->title;
+            }
+        }
+        $this->content = view(env('DNV').'.admin.articles_create_content')->with('categories',$lists)->render();
+        return $this->renderOutput();
+}
 
     /**
      * Store a newly created resource in storage.

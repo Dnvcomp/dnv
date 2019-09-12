@@ -6,6 +6,7 @@
     <title>{{ $title or 'Dnvcomp - Web разработка' }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="//cdn.ckeditor.com/4.12.1/full/ckeditor.js"></script>
     <link rel="stylesheet" href="{{ asset(env('DNV')) }}/assets/css/vendor.css">
     <link rel="stylesheet" href="{{ asset(env('DNV')) }}/assets/css/main.css">
 </head>
@@ -71,7 +72,6 @@
     <script src="{{ asset(env('DNV')) }}/assets/js/vendor.js"></script>
     <script src="{{ asset(env('DNV')) }}/assets/js/main.js"></script>
     <script src="{{ asset(env('DNV')) }}/assets/js/jquery.js"></script>
-    <script src="{{ asset(env('DNV')) }}/assets/js/ckeditor/ckeditor.js"></script>
     <script src="{{ asset(env('DNV')) }}/assets/js/bootstrap-filestyle.min.js"></script>
 </body>
 </html>
