@@ -4,7 +4,7 @@
         <div class="col-lg-6 mb--20">
             <h5>Название</h5>
             <small id="smallTitle" class="form-text text-muted"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;&nbsp;Заголовок материала</small>
-            {!! Form::text('title',isset($article->title) ? $article->title : old('title'),['class'=>'form-control','placeholder'=>'Введите название страницы']) !!}
+            {!! Form::text('title',isset($article->title) ? $article->title : old('title'),['class'=>'form-control','placeholder'=>'Введите название статьи']) !!}
         </div>
         <div class="col-lg-6 mb--20">
             <h5>Ключевые слова</h5>
@@ -48,12 +48,13 @@
             @endif
             <div class="form-group">
                 <h5>Изображение материала:</h5>
-                {!! Form::file('image', ['class' => 'feature__title','data-buttonText'=>'Выберите изображение','data-buttonName'=>"btn-primary",'data-placeholder'=>"Файла нет"]) !!}
+                {!! Form::file('image', ['class' => 'btn','data-buttonText'=>'Выберите изображение','data-buttonName'=>"btn-primary",'data-placeholder'=>"Файла нет"]) !!}
             </div>
         </div>
         <div class="col-lg-6 mb--20">
             <h5>Категория материала</h5>
-                {!! Form::select('category_id', $categories,isset($article->category_id) ? $article->category_id  : '', ['class' => 'custom-select']) !!}
+            <small id="smallTitle" class="form-text text-muted"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;Выберите категорию</small>
+            {!! Form::select('category_id', $categories,isset($article->category_id) ? $article->category_id  : '', ['class' => 'custom-select']) !!}
         </div>
     </div>
     @if(isset($article->id))

@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="Sliders">
-      <change afterPath="$PROJECT_DIR$/app/Policies/ArticlePolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dnv/assets/js/bootstrap-filestyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dnv/assets/js/bootstrap-filestyle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/admin/articles_create_content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ArticleRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/admin/articles_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/admin/articles_content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ArticlesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ArticlesRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Repository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dnv/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dnv/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dnv/admin/articles_create_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/admin/articles_create_content.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +21,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="dnv.loc" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -192,7 +193,10 @@
       <workItem from="1568123685943" duration="701000" />
       <workItem from="1568126039295" duration="10741000" />
       <workItem from="1568192519240" duration="30703000" />
-      <workItem from="1568266996479" duration="27210000" />
+      <workItem from="1568266996479" duration="27886000" />
+      <workItem from="1568318712355" duration="857000" />
+      <workItem from="1568319747662" duration="821000" />
+      <workItem from="1568351776806" duration="3896000" />
     </task>
     <task id="LOCAL-00001" summary="Sliders">
       <created>1566394911098</created>
