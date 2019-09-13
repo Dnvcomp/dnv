@@ -1,5 +1,6 @@
 @if($articles)
     <div class="col-lg-12">
+        <div class="row">
         <table class="table table-bordered table-hover">
             <thead>
             <tr>
@@ -17,7 +18,7 @@
                 <tr>
                     <th scope="row">{{ $article->id }}</th>
                     <td>{!! Html::link(route('admin.articles.edit',['articles'=>$article->alias]),$article->title) !!}</td>
-                    <td class="text-left">{{ str_limit($article->text,200)}}</td>
+                    <td class="text-left">{!! str_limit($article->text,50) !!}</td>
                     <td>
                         @if(isset($article->img->mini))
                             {!! Html::image(asset(env('DNV')).'/assets/img/articles/'.$article->img->mini) !!}
@@ -36,5 +37,6 @@
             </tbody>
         </table>
         {!! Html::link(route('admin.articles.create'),'Добавить  материал',['class' => 'btn btn-success']) !!}
-        </div>
+    </div>
+    </div>
 @endif

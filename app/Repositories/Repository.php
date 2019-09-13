@@ -40,7 +40,7 @@ abstract class Repository
         $result = $this->model->where('alias',$alias)->first();
         return $result;
     }
-    public function transliterate()
+    public function transliterate($string)
     {
         $str = mb_strtolower($string,'utf-8');
         $let_array = array(

@@ -7,7 +7,7 @@
                         @foreach($articles as $article)
                             <div class="blog__media">
                                 <figure class="image">
-                                    <img src="{{ asset(env('DNV')) }}/assets/img/blog/{{ $article->img->max }}"alt="Blog-image" alt="Blog-image" class="w-100">
+                                    <img src="{{ asset(env('DNV')) }}/assets/img/articles/{{ $article->img->max }}"alt="Blog-image" alt="Blog-image" class="w-100">
                                     <a href="{{ route('articles.show',['alias'=>$article->alias]) }}" class="item-overlay"></a>
                                 </figure>
                             </div>

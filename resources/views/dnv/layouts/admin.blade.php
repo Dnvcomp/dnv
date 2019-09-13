@@ -26,21 +26,25 @@
             </header>
         <!-- // Header End -->
         <!-- Main Content Wrapper Start -->
-        @if(count($errors) > 0)
+        @if (count($errors) > 0)
             <div class="box error-box">
-                @foreach($errors->all() as $error)
+
+                @foreach ($errors->all() as $error)
                     <p>{{ $error }}</p>
                 @endforeach
+
             </div>
         @endif
-        @if(session('status'))
+
+        @if (session('status'))
             <div class="box success-box">
-                {{ $session('status') }}
+                {{ session('status') }}
             </div>
         @endif
-        @if(session('error'))
+
+        @if (session('error'))
             <div class="box error-box">
-                {{ $session('error') }}
+                {{ session('error') }}
             </div>
         @endif
         <main class="main-content-wrapper">

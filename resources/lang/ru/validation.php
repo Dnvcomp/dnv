@@ -72,10 +72,10 @@ return [
         'string'  => ':attribute должно быть :size строкой.',
         'array'   => ':attribute должен содержать :size значение.',
     ],
-    'string'               => ':attribute должен быть строкой.',
+    'string'               => 'Должен быть строкой.',
     'timezone'             => 'Должен быть действительной зоной.:attribute ',
-    'unique'               => ':attribute уже занят.',
-    'url'                  => ':attribute формат неверен.',
+    'unique'               => 'Уже занят.',
+    'url'                  => 'Формат неверен.',
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
