@@ -1,6 +1,6 @@
 @if($articles)
     <table class="table table-bordered table-hover">
-        <thead>
+        <thead class="bg-light">
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Заголовок</th>
