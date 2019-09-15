@@ -143,6 +143,17 @@ class ArticlesRepository extends Repository {
             return ['status' => 'Ваш материал статьи успешно обновлён'];
         }
     }
+
+    public function deleteArticle($article)
+    {
+        if (Gate::denies('destroy', $article)) {
+            abort(403);
+        }
+        $article->comments()->delete();
+        if($article->delete()) {
+            return ['status' => 'Ваш материал статьи успешно удалён'];
+        }
+    }
 }
 
 ?>
