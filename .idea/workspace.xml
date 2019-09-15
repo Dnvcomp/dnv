@@ -2,33 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="Sliders">
-      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/articles/336.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/articles/ejjEqBdk.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/articles/ejjEqBdk_max.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dnv/assets/img/articles/ejjEqBdk_mini.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/ArticlePolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/ArticlePolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/2hyZnDfz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/2hyZnDfz_max.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/2hyZnDfz_mini.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/BHB5622J.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/BHB5622J_max.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/BHB5622J_mini.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/Bn5533cP.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/Bn5533cP_max.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/Bn5533cP_mini.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/KvmJ1eas.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/KvmJ1eas_max.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/KvmJ1eas_mini.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/p8ZCVU6W.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/p8ZCVU6W_max.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dnv/assets/img/articles/p8ZCVU6W_mini.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/admin/articles_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/admin/articles_content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/articlesBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/articlesBar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/portfolios_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/portfolios_content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ArticleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ArticleRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ArticlesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ArticlesRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -226,6 +203,7 @@
       <workItem from="1568380367396" duration="3834000" />
       <workItem from="1568396820368" duration="172000" />
       <workItem from="1568528557715" duration="2954000" />
+      <workItem from="1568548864863" duration="2967000" />
     </task>
     <task id="LOCAL-00001" summary="Sliders">
       <created>1566394911098</created>
