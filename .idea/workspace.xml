@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="Sliders">
-      <change afterPath="$PROJECT_DIR$/app/Policies/PermissionPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenusController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dnv/admin/customMenuItems.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dnv/admin/menus.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dnv/admin/menus_content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PermissionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PermissionsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/PermissionsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PermissionsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dnv/admin/articles_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/admin/articles_content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/admin/permissions_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/admin/permissions_content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dnv/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/layouts/admin.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +209,7 @@
       <workItem from="1568396820368" duration="172000" />
       <workItem from="1568528557715" duration="2954000" />
       <workItem from="1568548864863" duration="14493000" />
-      <workItem from="1568564107081" duration="10950000" />
+      <workItem from="1568564107081" duration="16362000" />
     </task>
     <task id="LOCAL-00001" summary="Sliders">
       <created>1566394911098</created>

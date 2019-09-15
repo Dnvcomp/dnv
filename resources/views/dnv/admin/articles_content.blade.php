@@ -27,7 +27,7 @@
                     <td>
                         {!! Form::open(['url'=>route('admin.articles.destroy',['articles'=>$article->alias]),'class'=>'form-horizontal','method'=>'post']) !!}
                         {{ method_field('DELETE') }}
-                        {!! Form::button('Удалить',['class'=>'btn btn-danger','type'=>'submit']) !!}
+                        {!! Form::button('Удалить',['class'=>'btn-danger','type'=>'submit']) !!}
                         {!! Form::close() !!}
                     </td>
                 </tr>
