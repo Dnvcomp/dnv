@@ -9,7 +9,7 @@
                         @if($key == 0)
                             <div class="blog__media">
                                 <figure class="image">
-                                    <img src="{{ asset(env('DNV')) }}/assets/img/blog/{{ $item->img->max }}" alt="Blog-image" class="w-100">
+                                    <img src="{{ asset(env('DNV')) }}/assets/img/articles/{{ $item->img->max }}" alt="Blog-image" class="w-100">
                                     <a href="{{ route('portfolios.show',['alias'=>$item->alias]) }}" class="item-overlay"></a>
                                 </figure>
                             </div>

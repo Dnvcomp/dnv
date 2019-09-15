@@ -26,6 +26,9 @@ class RouteServiceProvider extends ServiceProvider
     {
         $router->pattern('alias','[\w-]+');
         parent::boot($router);
+        $router->bind('articles', function ($value) {
+            return \Dnv\Article::where('alias', $value)->first();
+        });
     }
 
     /**

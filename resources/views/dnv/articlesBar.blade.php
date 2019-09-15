@@ -7,7 +7,7 @@
                 <div class="bl-widget author">
                     <div class="inner">
                         <div class="thumb">
-                            <img src="{{ asset(env('DNV')) }}/assets/img/others/{{ $portfolio->img->path }}" alt="Author article">
+                            <img src="{{ asset(env('DNV')) }}/assets/img/other/{{ $portfolio->img->path }}" alt="Author article">
                         </div>
                         <div class="info">
                             <h5 class="mb--5">{{ $portfolio->title }}</h5>

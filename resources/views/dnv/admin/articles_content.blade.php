@@ -1,24 +1,22 @@
 @if($articles)
-    <div class="col-lg-12">
-        <div class="row">
-        <table class="table table-bordered table-hover">
-            <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Заголовок</th>
-                <th scope="col">Текст</th>
-                <th scope="col">Изображение</th>
-                <th scope="col">Категория</th>
-                <th scope="col">Автор</th>
-                <th scope="col">Действие</th>
-            </tr>
-            </thead>
-            <tbody class="text-justify">
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Заголовок</th>
+            <th scope="col">Текст</th>
+            <th scope="col">Изображение</th>
+            <th scope="col">Категория</th>
+            <th scope="col">Автор</th>
+            <th scope="col">Действие</th>
+        </tr>
+        </thead>
+        <tbody>
             @foreach($articles as $article)
                 <tr>
-                    <th scope="row">{{ $article->id }}</th>
+                    <th>{{ $article->id }}</th>
                     <td>{!! Html::link(route('admin.articles.edit',['articles'=>$article->alias]),$article->title) !!}</td>
-                    <td class="text-left">{!! str_limit($article->text,50) !!}</td>
+                    <td>{{str_limit($article->text,170)}}</td>
                     <td>
                         @if(isset($article->img->mini))
                             {!! Html::image(asset(env('DNV')).'/assets/img/articles/'.$article->img->mini) !!}
@@ -34,9 +32,7 @@
                     </td>
                 </tr>
             @endforeach
-            </tbody>
-        </table>
-        {!! Html::link(route('admin.articles.create'),'Добавить  материал',['class' => 'btn btn-success']) !!}
-    </div>
-    </div>
+        </tbody>
+    </table>
+    {!! Html::link(route('admin.articles.create'),'Добавить  материал',['class' => 'btn']) !!}
 @endif

@@ -7,7 +7,7 @@
                 <div class="blog__inner">
                     <div class="blog__media">
                         <figure class="image">
-                            <img src="{{ asset(env('DNV')) }}/assets/img/blog/{{ $portfolio->img->max }}" height="800" alt="Author article">
+                            <img src="{{ asset(env('DNV')) }}/assets/img/articles/{{ $portfolio->img->max }}" height="800" alt="Author article">
                             <a href="{{ route('articles.show',['alias'=>$portfolio->alias]) }}" class="item-overlay"></a>
                         </figure>
                     </div>

@@ -9,6 +9,7 @@ use Dnv\Http\Requests;
 use Dnv\Http\Controllers\Controller;
 use Dnv\Repositories\ArticlesRepository;
 use Gate;
+use Dnv\Article;
 
 class ArticlesController extends AdminController
 {
@@ -96,9 +97,26 @@ class ArticlesController extends AdminController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Article $article)
     {
-        //
+        if (Gate::denies('edit', new Article)) {
+            abort(403);
+        }
+        $article->img = json_decode($article->img);
+
+        $categories = Category::select(['title','alias','parent_id','id'])->get();
+        $lists = array();
+        foreach($categories as $category) {
+            if($category->parent_id == 0) {
+                $lists[$category->title] = array();
+            }
+            else {
+                $lists[$categories->where('id',$category->parent_id)->first()->title][$category->id] = $category->title;
+            }
+        }
+        $this->title = 'Редактивование материала - '. $article->title ;
+        $this->content = view(env('DNV').'.admin.articles_create_content')->with(['categories'=>$lists, 'article'=>$article])->render();
+        return $this->renderOutput();
     }
 
     /**
