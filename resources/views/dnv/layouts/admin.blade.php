@@ -76,7 +76,5 @@
     <!-- *** JS Files **  -->
     <script src="{{ asset(env('DNV')) }}/assets/js/vendor.js"></script>
     <script src="{{ asset(env('DNV')) }}/assets/js/main.js"></script>
-    <script src="{{ asset(env('DNV')) }}/assets/js/jquery.js"></script>
-    <script src="{{ asset(env('DNV')) }}/assets/js/bootstrap-filestyle.min.js"></script>
 </body>
 </html>

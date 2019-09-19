@@ -38,7 +38,7 @@
                 <div class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     <div>
                         <h5 class="mb-0">{!! Form::radio('type', 'blogLink',(isset($type) && $type == 'blogLink') ? TRUE : FALSE,['class' => 'radioMenu']) !!}
-                            <span class="label">Раздел Статьи:</span>
+                            <span class="label">Раздел cтатьи:</span>
                         </h5>
                     </div>
                 </div>
@@ -69,8 +69,14 @@
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                 <div class="card-body">
-                    <small id="smallTitle" class="form-text text-muted"><i class="fa fa-paragraph" aria-hidden="true"></i>&nbsp;&nbsp;Ссылка на запись автора:</small>
-                    {!! Form::select('portfolio_alias', $portfolios, (isset($option) && $option) ? $option :FALSE, ['class'=>'custom-select','placeholder' => 'Не используется']) !!}
+                    <div class="col">
+                        <small id="smallTitle" class="form-text text-muted"><i class="fa fa-paragraph" aria-hidden="true"></i>&nbsp;&nbsp;Ссылка на запись автора:</small>
+                        {!! Form::select('portfolio_alias', $portfolios, (isset($option) && $option) ? $option :FALSE, ['class'=>'custom-select','placeholder' => 'Не используется']) !!}
+                    </div>
+                    <div class="col">
+                        <small id="smallTitle" class="form-text text-muted"><i class="fa fa-paragraph" aria-hidden="true"></i>&nbsp;&nbsp;Aвтор:</small>
+                        {!! Form::select('filter_alias', $filters, (isset($option) && $option) ? $option :FALSE, ['class'=>'custom-select','placeholder' => 'Не используется']) !!}
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,4 +87,5 @@
         @endif
         {!! Form::button('Сохранить', ['class' => 'btn mb--9pt4','type'=>'submit']) !!}
         {!! Form::close() !!}
+    </div>
 </div>

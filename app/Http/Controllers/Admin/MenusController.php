@@ -9,6 +9,7 @@ use Dnv\Repositories\PortfoliosRepository;
 use Illuminate\Http\Request;
 use Gate;
 use Dnv\Http\Requests;
+use Dnv\Http\Requests\MenusRequest;
 use Dnv\Http\Controllers\Controller;
 
 class MenusController extends AdminController
@@ -106,9 +107,13 @@ class MenusController extends AdminController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MenusRequest $request)
     {
-        //
+        $result = $this->m_rep->addMenu($request);
+        if(is_array($result) && !empty($result['error'])) {
+            return back()->with($result);
+        }
+        return redirect('/admin')->with($result);
     }
 
     /**
