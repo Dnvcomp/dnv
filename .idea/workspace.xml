@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="Sliders">
-      <change afterPath="$PROJECT_DIR$/resources/views/dnv/admin/menus_create_content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenusController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dnv/admin/menus_create_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dnv/admin/menus_create_content.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,14 +119,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\OSPanel\domains\dnv.loc\public\dnv\assets\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\OSPanel\domains\dnv.loc\public\dnv\assets\js" />
       <recent name="D:\OSPanel\domains\dnv.loc\public\dnv" />
       <recent name="D:\OSPanel\domains\dnv.loc\public\dnv\css" />
       <recent name="D:\OSPanel\domains\dnv.loc\public\dnv\bootsitrap3" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\dnv.loc\public\dnv\assets\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -206,6 +205,8 @@
       <workItem from="1568564107081" duration="16563000" />
       <workItem from="1568609435508" duration="610000" />
       <workItem from="1568610692688" duration="10689000" />
+      <workItem from="1568624696815" duration="1940000" />
+      <workItem from="1568856160588" duration="5697000" />
     </task>
     <task id="LOCAL-00001" summary="Sliders">
       <created>1566394911098</created>
