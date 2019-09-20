@@ -34,6 +34,10 @@ class RouteServiceProvider extends ServiceProvider
         $router->bind('menus', function ($value) {
             return \Dnv\Menu::where('id',$value)->first();
         });
+
+        $router->bind('users', function ($value) {
+            return \Dnv\User::find($value);
+        });
     }
 
     /**

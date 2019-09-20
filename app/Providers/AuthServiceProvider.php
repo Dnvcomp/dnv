@@ -7,9 +7,11 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 use Dnv\Article;
 use Dnv\Permission;
 use Dnv\Menu;
+use Dnv\User;
 use Dnv\Policies\ArticlePolicy;
 use Dnv\Policies\PermissionPolicy;
 use Dnv\Policies\MenusPolicy;
+use Dnv\Policies\UserPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -22,6 +24,7 @@ class AuthServiceProvider extends ServiceProvider
         Article::class => ArticlePolicy::class,
         Permission::class => PermissionPolicy::class,
         Menu::class => MenusPolicy::class,
+        User::class => UserPolicy::class,
     ];
 
     /**

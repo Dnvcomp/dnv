@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc5b0396-d08e-4f91-8aa1-816c3d5d2435" name="Default Changelist" comment="Sliders">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UserRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Policies/UserPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/UsersRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenusController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/MenusRepositopy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/MenusRepositopy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,14 +126,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\dnv.loc\app\Policies" />
+      <recent name="D:\OSPanel\domains\dnv.loc\public\dnv\assets\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\OSPanel\domains\dnv.loc\public\dnv\assets\js" />
       <recent name="D:\OSPanel\domains\dnv.loc\public\dnv" />
       <recent name="D:\OSPanel\domains\dnv.loc\public\dnv\css" />
       <recent name="D:\OSPanel\domains\dnv.loc\public\dnv\bootsitrap3" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\OSPanel\domains\dnv.loc\public\dnv\assets\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -211,6 +217,7 @@
       <workItem from="1568856160588" duration="13462000" />
       <workItem from="1568902927103" duration="7066000" />
       <workItem from="1568962867505" duration="1299000" />
+      <workItem from="1568972800497" duration="3552000" />
     </task>
     <task id="LOCAL-00001" summary="Sliders">
       <created>1566394911098</created>
